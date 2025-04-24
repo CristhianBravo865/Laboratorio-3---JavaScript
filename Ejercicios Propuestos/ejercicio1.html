@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <p id="resultado">Día de la semana.</p>
+    <script>
+        let diasSemana = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado"];
+        let fecha = new Date();
+        let dia = fecha.getDay();
+        let texto = "Hoy es: " + diasSemana[dia];
+        document.getElementById("resultado").innerHTML = texto;
+    </script>
+</body>
+</html>
