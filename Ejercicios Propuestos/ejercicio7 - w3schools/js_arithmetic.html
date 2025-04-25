@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Operaciones Aritméticas</h2>
+  <pre id="salida"></pre>
+
+  <script>
+    let salida = "";
+
+    // Literales
+    salida += "Operaciones con literales:\n";
+    let x = 100 + 50;
+    salida += `x = 100 + 50 = ${x}\n`;
+
+    // Variables
+    salida += "\nOperaciones con variables:\n";
+    let a = 20, b = 30;
+    x = a + b;
+    salida += `x = a + b = ${x} (a = ${a}, b = ${b})\n`;
+
+    // Expresiones
+    salida += "\nOperaciones con expresiones:\n";
+    x = (100 + 50) * a;
+    salida += `x = (100 + 50) * a = ${x}\n`;
+
+    // Suma
+    salida += "\nSuma:\n";
+    x = 5;
+    let y = 2;
+    let z = x + y;
+    salida += `x + y = ${z}\n`;
+
+    // Resta
+    salida += "\nResta:\n";
+    z = x - y;
+    salida += `x - y = ${z}\n`;
+
+    // Multiplicación
+    salida += "\nMultiplicación:\n";
+    z = x * y;
+    salida += `x * y = ${z}\n`;
+
+    // División
+    salida += "\nDivisión:\n";
+    z = x / y;
+    salida += `x / y = ${z}\n`;
+
+    // Módulo
+    salida += "\nMódulo (residuo):\n";
+    z = x % y;
+    salida += `x % y = ${z}\n`;
+
+    // Incremento
+    salida += "\nIncremento:\n";
+    x = 5;
+    x++;
+    salida += `x++ => x = ${x}\n`;
+
+    // Decremento
+    salida += "\nDecremento:\n";
+    x = 5;
+    x--;
+    salida += `x-- => x = ${x}\n`;
+
+    // Exponenciación
+    salida += "\nExponenciación:\n";
+    x = 5;
+    z = x ** 2;
+    salida += `x ** 2 = ${z}\n`;
+    z = Math.pow(x, 2);
+    salida += `Math.pow(x, 2) = ${z}\n`;
+
+    // Precedencia de operadores
+    salida += "\nPrecedencia de operadores:\n";
+    x = 100 + 50 * 3;
+    salida += `100 + 50 * 3 = ${x} (multiplicación primero)\n`;
+    x = (100 + 50) * 3;
+    salida += `(100 + 50) * 3 = ${x} (paréntesis primero)\n`;
+
+    // Izquierda a derecha
+    salida += "\nEvaluación izquierda a derecha:\n";
+    x = 100 + 50 - 3;
+    salida += `100 + 50 - 3 = ${x}\n`;
+    x = 100 / 50 * 3;
+    salida += `100 / 50 * 3 = ${x}\n`;
+
+    document.getElementById("salida").textContent = salida;
+  </script>
+</body>
+</html>
