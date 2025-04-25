@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pruebas de Operadores en JavaScript</title>
+</head>
+<body>
+  <h2>Operadores en JavaScript</h2>
+  <pre id="salida"></pre>
+
+  <script>
+    let salida = "";
+
+    // Operadores de asignación
+    salida += "Asignación:\n";
+    let x = 5;
+    let y = 2;
+    let z = x + y;
+    salida += `x = ${x}, y = ${y}, z = x + y = ${z}\n`;
+
+    // Suma
+    salida += "\nSuma:\n";
+    x = 10;
+    y = 3;
+    z = x + y;
+    salida += `x + y = ${z}\n`;
+
+    // Multiplicación
+    salida += "\nMultiplicación:\n";
+    x = 4;
+    y = 6;
+    z = x * y;
+    salida += `x * y = ${z}\n`;
+
+    // Aritmética
+    salida += "\nOperadores aritméticos:\n";
+    let a = 3;
+    let res = (100 + 50) * a;
+    salida += `(100 + 50) * ${a} = ${res}\n`;
+    let b = 10;
+    salida += `b++ = ${b++}, ahora b = ${b}\n`;
+    salida += `b-- = ${b--}, ahora b = ${b}\n`;
+    salida += `10 % 3 = ${10 % 3}\n`;
+    salida += `2 ** 4 = ${2 ** 4}\n`;
+
+    // Operadores compuestos
+    salida += "\nAsignaciones compuestas:\n";
+    let c = 10;
+    c += 5;
+    salida += `c += 5 => ${c}\n`;
+    c *= 2;
+    salida += `c *= 2 => ${c}\n`;
+
+    // Comparaciones
+    salida += "\nComparación:\n";
+    salida += `5 == "5" => ${5 == "5"}\n`;
+    salida += `5 === "5" => ${5 === "5"}\n`;
+    salida += `10 != 8 => ${10 != 8}\n`;
+    salida += `10 !== "10" => ${10 !== "10"}\n`;
+    salida += `7 > 3 => ${7 > 3}\n`;
+    salida += `3 <= 3 => ${3 <= 3}\n`;
+
+    // Operador ternario
+    salida += "\nOperador ternario:\n";
+    let edad = 18;
+    let acceso = edad >= 18 ? "Permitido" : "Denegado";
+    salida += `Edad ${edad}: Acceso ${acceso}\n`;
+
+    // Comparación de strings
+    salida += "\nComparación de strings:\n";
+    let t1 = "A", t2 = "B";
+    salida += `"A" < "B" => ${t1 < t2}\n`;
+    t1 = "20"; t2 = "5";
+    salida += `"20" < "5" => ${t1 < t2}\n`;
+
+    // Suma de strings
+    salida += "\nSuma de strings:\n";
+    let nombre = "John", apellido = "Doe";
+    let nombreCompleto = nombre + " " + apellido;
+    salida += `Nombre completo: ${nombreCompleto}\n`;
+
+    let frase = "Qué día tan ";
+    frase += "bonito";
+    salida += `Frase: ${frase}\n`;
+
+    // Mezcla de string y número
+    salida += "\nStrings y números:\n";
+    let e1 = 5 + 5;
+    let e2 = "5" + 5;
+    let e3 = "Hola" + 5;
+    salida += `5 + 5 = ${e1}\n`;
+    salida += `"5" + 5 = ${e2}\n`;
+    salida += `"Hola" + 5 = ${e3}\n`;
+
+    document.getElementById("salida").textContent = salida;
+  </script>
+</body>
+</html>
