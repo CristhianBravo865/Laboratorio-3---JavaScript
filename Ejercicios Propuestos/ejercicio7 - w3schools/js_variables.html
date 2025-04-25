@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <p id="demo3"></p>
+  <p id="demo4"></p>
+  <p id="demo5"></p>
+  <p id="demo6"></p>
+
+  <script>
+    // Declaración con var (anticuado)
+    var a = 5;
+    var b = 6;
+    var resultadoVar = a + b;
+
+    // Declaración con let
+    let x = 10;
+    let y = 20;
+    let resultadoLet = x + y;
+
+    // Declaración con const
+    const precio1 = 15;
+    const precio2 = 25;
+    let total = precio1 + precio2;
+
+    // Concatenación de strings
+    let nombre = "Juan";
+    let apellido = "Pérez";
+    let nombreCompleto = nombre + " " + apellido;
+
+    // Concatenación numérica y string
+    let ejemplo1 = "5" + 2 + 3; // "523"
+    let ejemplo2 = 2 + 3 + "5"; // "55"
+
+    // Uso de $ y _
+    let $dinero = 100;
+    let _codigo = "ABC123";
+
+    // Mostrar en HTML
+    document.getElementById("demo1").innerHTML = "var: a = " + a + ", b = " + b + " ==> resultado: " + resultadoVar;
+    document.getElementById("demo2").innerHTML = "let: x = " + x + ", y = " + y + " ==> resultado: " + resultadoLet;
+    document.getElementById("demo3").innerHTML = "const: precio1 = " + precio1 + ", precio2 = " + precio2 + " → total: " + total;
+    document.getElementById("demo4").innerHTML = "Nombre completo (string): " + nombreCompleto;
+    document.getElementById("demo5").innerHTML = `"5" + 2 + 3 = ${ejemplo1} &nbsp;&nbsp;&nbsp; 2 + 3 + "5" = ${ejemplo2}`;
+    document.getElementById("demo6").innerHTML = "$dinero = " + $dinero + ", _codigo = " + _codigo;
+  </script>
+</body>
+</html>
