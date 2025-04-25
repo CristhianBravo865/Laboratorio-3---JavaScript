@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pruebas de Sintaxis JavaScript</title>
+</head>
+<body>
+  <h1>Revisa la consola (F12)</h1>
+
+  <script>
+    // Comentarios en JavaScript
+    // Este es un comentario de una línea
+    /* Este es un 
+       comentario de múltiples líneas */
+
+    // Declaración de variables
+    var x;       // Usando var
+    let y;       // Usando let
+    const pi = 3.1416;  // Constante
+
+    // Asignación de valores
+    x = 5;
+    y = 6;
+    let z = x + y; // Uso de variables y operadores
+
+    // Literales numéricos y de texto
+    let num1 = 10.50;
+    let num2 = 1001;
+    let str1 = "John Doe";
+    let str2 = 'Jane Doe';
+
+    // Operadores aritméticos
+    let resultado = (5 + 6) * 10;
+    let multiplicacion = x * y;
+
+    // Expresiones
+    let suma = x + y;
+    let saludo = "Hola" + " " + "Mundo";
+
+    // Identificadores válidos
+    let $precio = 100;
+    let _nombre = "Producto";
+
+    // Case sensitivity
+    let lastName = "Doe";
+    let lastname = "Peterson"; // diferente variable
+
+    // Estilo de nombres (Camel Case)
+    let firstName = "Juan";         // lowerCamelCase
+    let LastName = "Pérez";         // UpperCamelCase
+    let first_name = "Pedro";       // con guión bajo
+
+    // Mostrar resultados en consola
+    console.log("x:", x);
+    console.log("y:", y);
+    console.log("z:", z);
+    console.log("resultado:", resultado);
+    console.log("multiplicación:", multiplicacion);
+    console.log("saludo:", saludo);
+    console.log("lastName:", lastName);
+    console.log("lastname:", lastname);
+    console.log("CamelCase example:", firstName, LastName, first_name);
+  </script>
+</body>
+</html>
