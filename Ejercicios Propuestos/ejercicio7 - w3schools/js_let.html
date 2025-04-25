@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pruebas de var, let y const</title>
+</head>
+<body>
+  <h2>Probando var, let y const en JavaScript</h2>
+  <pre id="salida"></pre>
+
+  <script>
+    let salida = "";
+
+    // Scope con let (no se puede usar fuera del bloque)
+    salida += "Scope con let:\n";
+    {
+      let x = 2;
+      salida += "Dentro del bloque, x = " + x + "\n";
+    }
+    try {
+      salida += "Fuera del bloque, x = " + x + "\n";
+    } catch (e) {
+      salida += "Fuera del bloque, x no existe (Error)\n";
+    }
+
+    // Scope con var (sí se puede usar fuera del bloque)
+    salida += "\nScope con var:\n";
+    {
+      var y = 5;
+      salida += "Dentro del bloque, y = " + y + "\n";
+    }
+    salida += "Fuera del bloque, y = " + y + "\n";
+
+    // Redeclaración con let (no se puede)
+    salida += "\nRedeclaración con let:\n";
+    let nombre = "Juan";
+    salida += "nombre = " + nombre + "\n";
+    try {
+      let nombre = "Pedro";
+    } catch (e) {
+      salida += "No se puede redeclarar 'nombre' con let en el mismo bloque (Error)\n";
+    }
+
+    // Redeclaración con var (sí se puede)
+    salida += "\nRedeclaración con var:\n";
+    var edad = 20;
+    var edad = 25;
+    salida += "edad = " + edad + "\n";
+
+    // Hoisting con var
+    salida += "\nHoisting con var:\n";
+    carro = "Toyota";
+    var carro;
+    salida += "carro = " + carro + "\n";
+
+    // Hoisting con let (no se puede usar antes de declarar)
+    salida += "\nHoisting con let:\n";
+    try {
+      moto = "Yamaha";
+      let moto;
+    } catch (e) {
+      salida += "No se puede usar 'moto' antes de declararla con let (Error)\n";
+    }
+
+    // const no se puede cambiar ni redeclarar
+    salida += "\nUso de const:\n";
+    const PI = 3.14;
+    salida += "PI = " + PI + "\n";
+    try {
+      PI = 3.1416;
+    } catch (e) {
+      salida += "No se puede cambiar el valor de una constante (Error)\n";
+    }
+
+    // let permite mismo nombre en distintos bloques
+    salida += "\nlet en distintos bloques:\n";
+    let z = 100;
+    salida += "z fuera = " + z + "\n";
+    {
+      let z = 200;
+      salida += "z dentro = " + z + "\n";
+    }
+    salida += "z otra vez fuera = " + z + "\n";
+
+    document.getElementById("salida").textContent = salida;
+  </script>
+</body>
+</html>
