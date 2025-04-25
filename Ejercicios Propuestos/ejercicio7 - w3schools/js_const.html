@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pruebas de const en JavaScript</title>
+</head>
+<body>
+  <h2>Probando const en JavaScript</h2>
+  <pre id="salida"></pre>
+
+  <script>
+    let salida = "";
+
+    // Const no puede ser reasignado
+    salida += "Const no puede ser reasignado:\n";
+    const PI = 3.1416;
+    salida += "PI = " + PI + "\n";
+    try {
+      PI = 3.14;
+    } catch (e) {
+      salida += "No se puede reasignar PI (Error)\n";
+    }
+
+    // Const debe ser inicializado
+    salida += "\nConst debe ser asignado al declararse:\n";
+    try {
+      //const numero;
+      numero = 5;
+    } catch (e) {
+      salida += "No se puede declarar const sin asignar valor (Error)\n";
+    }
+
+    // Const en distintos bloques
+    salida += "\nConst en distintos bloques:\n";
+    const x = 10;
+    salida += "x fuera = " + x + "\n";
+    {
+      const x = 2;
+      salida += "x dentro = " + x + "\n";
+    }
+    salida += "x otra vez fuera = " + x + "\n";
+
+    // Const no se puede redeclarar
+    salida += "\nRedeclaración con const:\n";
+    const saludo = "Hola";
+    try {
+      const saludo = "Adiós";
+    } catch (e) {
+      salida += "No se puede redeclarar 'saludo' en el mismo bloque (Error)\n";
+    }
+
+    // Hoisting con const
+    salida += "\nHoisting con const:\n";
+    try {
+      console.log(carName);
+      const carName = "Volvo";
+    } catch (e) {
+      salida += "No se puede usar 'carName' antes de declararlo con const (Error)\n";
+    }
+
+    // Const con arrays
+    salida += "\nConst con arrays:\n";
+    const cars = ["Saab", "Volvo", "BMW"];
+    cars[0] = "Toyota";
+    cars.push("Audi");
+    salida += "cars: " + cars.join(", ") + "\n";
+    try {
+      cars = ["Otra", "Lista"];
+    } catch (e) {
+      salida += "No se puede reasignar el array completo (Error)\n";
+    }
+
+    // Const con objetos
+    salida += "\nConst con objetos:\n";
+    const car = {tipo:"Fiat", modelo:"500", color:"blanco"};
+    car.color = "rojo";
+    car.propietario = "Juan";
+    salida += "car.color = " + car.color + "\n";
+    salida += "car.propietario = " + car.propietario + "\n";
+    try {
+      car = {tipo:"Volvo", modelo:"EX60", color:"rojo"};
+    } catch (e) {
+      salida += "No se puede reasignar el objeto completo (Error)\n";
+    }
+
+    document.getElementById("salida").textContent = salida;
+  </script>
+</body>
+</html>
