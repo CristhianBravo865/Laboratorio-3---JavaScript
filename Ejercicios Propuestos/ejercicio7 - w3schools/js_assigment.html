@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Operadores de Asignación</h2>
+  <pre id="salida"></pre>
+
+  <script>
+    let salida = "";
+
+    // Básicos
+    salida += "Operadores Básicos:\n";
+    let x = 10, y = 5;
+    salida += `x = ${x}, y = ${y}\n`;
+
+    x = y;
+    salida += `x = y => x = ${x}\n`;
+
+    x = 10; x += y;
+    salida += `x += y => x = ${x}\n`;
+
+    x = 10; x -= y;
+    salida += `x -= y => x = ${x}\n`;
+
+    x = 10; x *= y;
+    salida += `x *= y => x = ${x}\n`;
+
+    x = 10; x /= y;
+    salida += `x /= y => x = ${x}\n`;
+
+    x = 10; x %= y;
+    salida += `x %= y => x = ${x}\n`;
+
+    x = 2; y = 3; x **= y;
+    salida += `x **= y => x = ${x}\n`;
+
+    // Operadores de desplazamiento
+    salida += "\nOperadores de Desplazamiento:\n";
+    x = -100; x <<= 2;
+    salida += `x <<= 2 => x = ${x}\n`;
+
+    x = -100; x >>= 2;
+    salida += `x >>= 2 => x = ${x}\n`;
+
+    x = -100; x >>>= 2;
+    salida += `x >>>= 2 => x = ${x}\n`;
+
+    // Bitwise
+    salida += "\nOperadores Bitwise:\n";
+    x = 10; x &= 5;
+    salida += `x &= 5 => x = ${x}\n`;
+
+    x = 10; x |= 5;
+    salida += `x |= 5 => x = ${x}\n`;
+
+    x = 10; x ^= 5;
+    salida += `x ^= 5 => x = ${x}\n`;
+
+    // Lógicos (ES2020)
+    salida += "\nOperadores Lógicos (ES2020):\n";
+    x = 10; x &&= 5;
+    salida += `x &&= 5 => x = ${x}\n`;
+
+    x = 0; x ||= 5;
+    salida += `x ||= 5 => x = ${x}\n`;
+
+    x = null; x ??= 5;
+    salida += `x ??= 5 => x = ${x}\n`;
+
+    // Ejemplo con texto
+    salida += "\nConcatenación con +=:\n";
+    let texto = "Hola";
+    texto += " Mundo";
+    salida += `texto += " Mundo" => texto = ${texto}\n`;
+
+    document.getElementById("salida").textContent = salida;
+  </script>
+</body>
+</html>
