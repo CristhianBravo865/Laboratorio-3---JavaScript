@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Ejemplo de Objetos en JavaScript</h2>
+  <pre id="resultado"></pre>
+
+  <script>
+    let resultado = "";
+
+    //Crear objeto con object literal
+    const carro = {
+      name: "Fiat",
+      model: "500",
+      weight: "850kg",
+      color: "white",
+      start: function() {
+        return "El carro está encendido";
+      },
+      stop: function() {
+        return "El carro está apagado";
+      }
+    };
+
+    resultado += `Carro: ${carro.name}, Modelo: ${carro.model}, Peso: ${carro.weight}, Color: ${carro.color}\n`;
+    resultado += `${carro.start()}\n`;
+    resultado += `${carro.stop()}\n`;
+
+    //Acceder a propiedades de dos formas
+    resultado += `color (punto): ${carro.color}\n`;
+    resultado += `color (corchetes): ${carro["color"]}\n`;
+
+    //Añadir propiedad después de crear objeto
+    carro.year = 2020;
+    resultado += `Año agregado: ${carro.year}\n`;
+
+    // Metodo con this
+    const persona = {
+      firstName: "John",
+      lastName: "Doe",
+      fullName: function() {
+        return this.firstName + " " + this.lastName;
+      }
+    };
+
+    resultado += `Nombre completo: ${persona.fullName()}\n`;
+
+    // Mutabilidad (por referencia)
+    const copia = persona;
+    copia.firstName = "Jane";  // También cambia en persona
+
+    resultado += `persona modificado por copia: ${persona.fullName()}\n`;
+
+    //Objeto vacío y luego agregar propiedades
+    const animal = {};
+    animal.tipo = "Perro";
+    animal.nombre = "Firulais";
+    animal.hablar = function() {
+      return "Guau!";
+    };
+
+    resultado += `Animal: ${animal.tipo} llamado ${animal.nombre}, dice: ${animal.hablar()}\n`;
+
+    document.getElementById("resultado").textContent = resultado;
+  </script>
+</body>
+</html>
