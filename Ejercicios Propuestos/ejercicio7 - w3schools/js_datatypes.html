@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Tipos de Datos</h2>
+  <pre id="salida"></pre>
+
+  <script>
+    let salida = "";
+
+    // String
+    let texto = "Hola Mundo";
+    salida += `String: ${texto} (${typeof texto})\n`;
+
+    // Number
+    let numero = 42;
+    salida += `Number: ${numero} (${typeof numero})\n`;
+
+    // BigInt
+    let big = BigInt("123456789012345678901234567890");
+    salida += `BigInt: ${big} (${typeof big})\n`;
+
+    // Boolean
+    let esVerdadero = true;
+    salida += `Boolean: ${esVerdadero} (${typeof esVerdadero})\n`;
+
+    // Undefined
+    let indefinido;
+    salida += `Undefined: ${indefinido} (${typeof indefinido})\n`;
+
+    // Null (tipo especial: typeof null da "object" por compatibilidad)
+    let vacio = null;
+    salida += `Null: ${vacio} (${typeof vacio})\n`;
+
+    // Symbol
+    let simbolo = Symbol("id");
+    salida += `Symbol: ${simbolo.toString()} (${typeof simbolo})\n`;
+
+    // Object
+    let persona = {nombre: "Juan", edad: 30};
+    salida += `Object: ${JSON.stringify(persona)} (${typeof persona})\n`;
+
+    // Array (también es tipo object)
+    let autos = ["Toyota", "Mazda", "Kia"];
+    salida += `Array: ${autos} (${typeof autos})\n`;
+
+    // Date (también es tipo object)
+    let fecha = new Date("2022-03-25");
+    salida += `Date: ${fecha} (${typeof fecha})\n`;
+
+    // typeof con operaciones
+    salida += `\ntypeof 3 + 4: ${typeof (3 + 4)}\n`;
+
+    // Dinamismo
+    let x;
+    salida += `\nDinámico:\n`;
+    salida += `x sin valor: ${x} (${typeof x})\n`;
+    x = 5;
+    salida += `x = 5: ${x} (${typeof x})\n`;
+    x = "Juan";
+    salida += `x = "Juan": ${x} (${typeof x})\n`;
+
+    // Comportamiento especial con strings + números
+    salida += `\nStrings + Números:\n`;
+    x = 16 + "Volvo";
+    salida += `16 + "Volvo" = ${x}\n`;
+
+    x = "Volvo" + 16 + 4;
+    salida += `"Volvo" + 16 + 4 = ${x}\n`;
+
+    x = 16 + 4 + "Volvo";
+    salida += `16 + 4 + "Volvo" = ${x}\n`;
+
+    document.getElementById("salida").textContent = salida;
+  </script>
+</body>
+</html>
