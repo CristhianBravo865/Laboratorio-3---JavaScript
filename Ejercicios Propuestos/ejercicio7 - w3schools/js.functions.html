@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Ejemplos de Funciones</h2>
+  <pre id="resultado"></pre>
+
+  <script>
+    let resultado = "";
+
+    // 1. Función con parámetros y return
+    function multiplicar(p1, p2) {
+      return p1 * p2;
+    }
+
+    let producto = multiplicar(4, 5);
+    resultado += `multiplicar(4, 5): ${producto}\n`;
+
+    // 2. Función que convierte Fahrenheit a Celsius
+    function toCelsius(fahrenheit) {
+      return (5/9) * (fahrenheit - 32);
+    }
+
+    resultado += `toCelsius(77): ${toCelsius(77)} °C\n`;
+
+    // 3. Función sin parámetros
+    function saludo() {
+      return "¡Hola Mundo!";
+    }
+
+    resultado += `saludo(): ${saludo()}\n`;
+
+    // 4. Usar la función directamente como valor
+    resultado += `Temperatura directa: La temperatura es ${toCelsius(86)} °C\n`;
+
+    // 5. Sin paréntesis: se referencia la función
+    resultado += `Referencia sin (): ${toCelsius}\n`; // muestra que es una función
+
+    // 6. Llamar sin argumentos
+    resultado += `toCelsius() sin parámetro: ${toCelsius()}\n`; // resultado: NaN
+
+    // 7. Variables locales
+    function mostrarCarro() {
+      let carName = "Mazda";
+      return `Dentro de la función: ${carName}`;
+    }
+
+    resultado += `${mostrarCarro()}\n`;
+
+    // carName afuera de la función daría error si intentamos usarla
+    try {
+      resultado += `Fuera de la función: ${carName}\n`;
+    } catch (e) {
+      resultado += `Fuera de la función: Error - ${e.message}\n`;
+    }
+
+    document.getElementById("resultado").textContent = resultado;
+  </script>
+</body>
+</html>
