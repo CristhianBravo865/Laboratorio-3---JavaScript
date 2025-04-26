@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h2>JavaScript Events</h2>
+
+
+  <!-- Botón que cambia el contenido de un elemento por la fecha -->
+  <button onclick="document.getElementById('demo').innerHTML = Date()">¿Qué hora es?</button>
+
+  <br><br>
+
+  <!-- Botón que cambia su propio contenido -->
+  <button onclick="this.innerHTML = Date()">Haz clic y cambia este botón</button>
+
+  <br><br>
+
+  <!-- Botón que llama a una función -->
+  <button onclick="displayDate()">Mostrar fecha en consola</button>
+
+  <script>
+    function displayDate() {
+      console.log("Fecha actual:", Date());
+      document.getElementById("demo").innerHTML = "Revisá la consola para ver la fecha.";
+    }
+  </script>
+
+</body>
+</html>
