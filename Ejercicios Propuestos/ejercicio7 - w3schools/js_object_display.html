@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Mostrar un Objeto en JavaScript</h2>
+  <pre id="demo"></pre>
+
+  <script>
+    const person = {
+      name: "John",
+      age: 30,
+      city: "New York"
+    };
+
+    let salida = "";
+
+    // Forma incorrecta
+    salida += "Forma directa (da [object Object]):\n";
+    salida += person + "\n\n";
+
+    // Acceder manualmente
+    salida += "Accediendo propiedad por propiedad:\n";
+    salida += person.name + ", " + person.age + ", " + person.city + "\n\n";
+
+    // Usar un bucle
+    salida += "Usando for...in:\n";
+    for (let x in person) {
+      salida += person[x] + " ";
+    }
+    salida += "\n\n";
+
+    // Usar Object.values()
+    salida += "Con Object.values():\n";
+    salida += Object.values(person) + "\n\n";
+
+    // Usar Object.entries()
+    salida += "Con Object.entries():\n";
+    for (let [clave, valor] of Object.entries(person)) {
+      salida += clave + ": " + valor + "\n";
+    }
+    salida += "\n";
+
+    // Usar JSON.stringify()
+    salida += "Con JSON.stringify():\n";
+    salida += JSON.stringify(person) + "\n";
+
+    document.getElementById("demo").textContent = salida;
+  </script>
+</body>
+</html>
