@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Propiedades de Objetos en JavaScript</h2>
+  <pre id="salida"></pre>
+
+  <script>
+    let salida = "";
+
+    // Acceder a propiedades
+    const person = {
+      firstName: "John",
+      lastName: "Doe",
+      age: 50,
+      eyeColor: "blue"
+    };
+
+    salida += person.firstName + " is " + person.age + " years old.\n";
+    salida += person["firstName"] + " is " + person["age"] + " years old.\n";
+
+    let x = "firstName";
+    let y = "age";
+    salida += person[x] + " is " + person[y] + " years old.\n";
+
+    // Agregar nueva propiedad
+    person.nationality = "English";
+    salida += "Nationality: " + person.nationality + "\n";
+
+    // Eliminar propiedad
+    delete person.age;
+    salida += "Age after delete: " + person.age + "\n"; // undefined
+
+    // Objetos anidados
+    const myObj = {
+      name: "John",
+      age: 30,
+      myCars: {
+        car1: "Ford",
+        car2: "BMW",
+        car3: "Fiat"
+      }
+    };
+
+    salida += "Nested: " + myObj.myCars.car2 + "\n";
+    salida += "Nested (corchetes): " + myObj.myCars["car2"] + "\n";
+
+    let p1 = "myCars";
+    let p2 = "car2";
+    salida += "Nested (variables): " + myObj[p1][p2] + "\n";
+
+    document.getElementById("salida").textContent = salida;
+  </script>
+</body>
+</html>
