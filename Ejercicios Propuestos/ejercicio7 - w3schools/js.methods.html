@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>JavaScript Object Methods</h2>
+  <pre id="salida"></pre>
+
+  <script>
+    let salida = "";
+
+    const person = {
+      firstName: "John",
+      lastName: "Doe",
+      id: 5566,
+      fullName: function() {
+        return this.firstName + " " + this.lastName;
+      }
+    };
+
+    // Acceder a un método
+    let nombreCompleto = person.fullName();
+    salida += "Método fullName(): " + nombreCompleto + "\n";
+
+    // Ver función sin ejecutarla
+    salida += "Sin los paréntesis: " + person.fullName + "\n\n";
+
+    // Agregar nuevo método
+    person.name = function () {
+      return this.firstName + " " + this.lastName;
+    };
+    salida += "Nuevo método name(): " + person.name() + "\n";
+
+    // Usar un método de string dentro del método
+    person.nameUpper = function () {
+      return (this.firstName + " " + this.lastName).toUpperCase();
+    };
+    salida += "Método nameUpper(): " + person.nameUpper() + "\n";
+
+    document.getElementById("salida").textContent = salida;
+  </script>
+</body>
+</html>
