@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Strings</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        // Usar comillas
+        let text1 = "John Doe";
+        let carName1 = "Volvo XC60"; // Comillas dobles
+        let carName2 = 'Volvo XC60'; // Comillas simples
+
+        // Comillas dentro de comillas
+        let answer1 = "It's alright";
+        let answer2 = "He is called 'Johnny'";
+        let answer3 = 'He is called "Johnny"';
+
+        // Template String
+        let template = `He's often called "Johnny"`;
+
+        // Longitud de un string
+        let text2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let length = text2.length;
+
+        // Caracteres de escape
+        let escape1 = "We are the so-called \"Vikings\" from the north.";
+        let escape2 = 'It\'s alright.';
+        let escape3 = "The character \\ is called backslash.";
+
+        // Otros caracteres de escape
+        let otherEscapes = "Line1\nLine2\tTabbedLine";
+
+        // Romper líneas largas de texto
+        let longText = "Hello " +
+            "Dolly!";
+
+        // Template string multilinea
+        let multiLineText = `The quick
+                            brown fox
+                            jumps over
+                            the lazy dog`;
+
+        // String como objeto
+        let x = "John";
+        let y = new String("John");
+
+        // Resultado a mostrar
+        document.getElementById("demo").innerHTML =
+            "<b>Uso de comillas:</b> " + text1 + "<br>" +
+            "<b>Carros:</b> " + carName1 + " - " + carName2 + "<br>" +
+            "<b>Comillas dentro:</b> " + answer1 + " / " + answer2 + " / " + answer3 + "<br>" +
+            "<b>Template:</b> " + template + "<br>" +
+            "<b>Longitud:</b> " + length + "<br>" +
+            "<b>Escape caracteres:</b> " + escape1 + " / " + escape2 + " / " + escape3 + "<br>" +
+            "<b>Otros escapes:</b> " + otherEscapes + "<br>" +
+            "<b>Texto largo:</b> " + longText + "<br>" +
+            "<b>Multilínea:</b> " + multiLineText + "<br>" +
+            "<b>Comparaciones:</b> (x == y): " + (x == y) + " | (x === y): " + (x === y);
+    </script>
+
+</body>
+
+</html>
