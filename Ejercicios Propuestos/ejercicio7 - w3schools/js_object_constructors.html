@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>JavaScript Object Constructors</h2>
+  <p id="demo"></p>
+
+  <script>
+    // Constructor base
+    function Person(first, last, age, eye) {
+      this.firstName = first;
+      this.lastName = last;
+      this.age = age;
+      this.eyeColor = eye;
+    }
+
+    // Crear objetos
+    const myFather = new Person("John", "Doe", 50, "blue");
+    const myMother = new Person("Sally", "Rally", 48, "green");
+    const mySister = new Person("Anna", "Rally", 18, "green");
+    const mySelf = new Person("Johnny", "Rally", 22, "green");
+
+    // Agregar propiedad a un solo objeto
+    myFather.nationality = "English";
+
+    // Agregar propiedad al prototipo (todos los objetos la tendrán)
+    Person.prototype.nationality = "English";
+
+    // Agregar método al prototipo
+    Person.prototype.fullName = function () {
+      return this.firstName + " " + this.lastName;
+    };
+
+    // Agregar método a un solo objeto
+    myMother.changeName = function(name) {
+      this.lastName = name;
+    };
+
+    // Agregar método al prototipo
+    Person.prototype.changeName = function(name) {
+      this.lastName = name;
+    };
+
+    // Usar los métodos
+    myMother.changeName("Doe");
+
+    // Mostrar información
+    let output = `
+      <strong>myFather:</strong> ${myFather.fullName()} - ${myFather.nationality} <br>
+      <strong>myMother:</strong> ${myMother.fullName()} - ${myMother.lastName} <br>
+      <strong>mySister:</strong> ${mySister.fullName()} <br>
+      <strong>mySelf:</strong> ${mySelf.fullName()} <br>
+    `;
+
+    document.getElementById("demo").innerHTML = output;
+  </script>
+</body>
+</html>
