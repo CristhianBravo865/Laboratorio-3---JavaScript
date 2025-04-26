@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+
+<script>
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let length = text.length;
+console.log(length);
+
+let char = text.charAt(0);
+console.log(char);
+
+let code = text.charCodeAt(0);
+console.log(code);
+
+let letter = text.at(2);
+console.log(letter);
+
+let letter2 = text[0];
+console.log(letter2);
+
+let part = text.slice(7, 13);
+console.log(part);
+
+let part2 = text.substring(7, 13);
+console.log(part2);
+
+let part3 = text.substr(7, 6);
+console.log(part3);
+
+let text1 = "Hello World!";
+let text2 = "Hello";
+let text3 = "World";
+
+let text4 = text1.toUpperCase();
+console.log(text4);
+
+let text5 = text1.toLowerCase();
+console.log(text5);
+
+let text6 = text2.concat(" ", text3);
+console.log(text6);
+
+let text7 = "      Hello World!      ";
+let trimmed = text7.trim();
+console.log(trimmed);
+
+let trimmedStart = text7.trimStart();
+console.log(trimmedStart);
+
+let trimmedEnd = text7.trimEnd();
+console.log(trimmedEnd);
+
+let paddedStart = text2.padStart(8, "x");
+console.log(paddedStart);
+
+let paddedEnd = text2.padEnd(8, "x");
+console.log(paddedEnd);
+
+let repeated = text2.repeat(2);
+console.log(repeated);
+
+let newText = text1.replace("Hello", "Hi");
+console.log(newText);
+
+let newTextAll = "Hello Hello Hello".replaceAll("Hello", "Hi");
+console.log(newTextAll);
+
+let splitted = text1.split(" ");
+console.log(splitted);
+</script>
+
+</body>
+</html>
