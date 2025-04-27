@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+    <script>
+        // forEach()
+        const numbers1 = [45, 4, 9, 16, 25];
+        let txt1 = "";
+        numbers1.forEach(myFunction1);
+        function myFunction1(value) {
+            txt1 += value + "<br>";
+        }
+        console.log(txt1);
+
+        // map()
+        const numbers2 = [45, 4, 9, 16, 25];
+        const numbers3 = numbers2.map(myFunction2);
+        function myFunction2(value) {
+            return value * 2;
+        }
+        console.log(numbers3);
+
+        // flatMap()
+        const myArr = [1, 2, 3, 4, 5, 6];
+        const newArr = myArr.flatMap((x) => x * 2);
+        console.log(newArr);
+
+        // filter()
+        const numbers4 = [45, 4, 9, 16, 25];
+        const over18 = numbers4.filter(myFunction3);
+        function myFunction3(value) {
+            return value > 18;
+        }
+        console.log(over18);
+
+        // reduce()
+        const numbers5 = [45, 4, 9, 16, 25];
+        let sum1 = numbers5.reduce(myFunction4);
+        function myFunction4(total, value) {
+            return total + value;
+        }
+        console.log(sum1);
+
+        // reduce() con valor inicial
+        let sum2 = numbers5.reduce(myFunction4, 100);
+        console.log(sum2);
+
+        // reduceRight()
+        let sum3 = numbers5.reduceRight(myFunction4);
+        console.log(sum3);
+
+        // every()
+        let allOver18 = numbers5.every(myFunction5);
+        function myFunction5(value) {
+            return value > 18;
+        }
+        console.log(allOver18);
+
+        // some()
+        let someOver18 = numbers5.some(myFunction5);
+        console.log(someOver18);
+
+        // Array.from()
+        const arrFromString = Array.from("ABCDEFG");
+        console.log(arrFromString);
+
+        // keys()
+        const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+        const keys = fruits1.keys();
+        let txt2 = "";
+        for (let x of keys) {
+            txt2 += x + "<br>";
+        }
+        console.log(txt2);
+
+        // entries()
+        const f = fruits1.entries();
+        for (let x of f) {
+            console.log(x);
+        }
+
+        // with()
+        const months = ["Januar", "Februar", "Mar", "April"];
+        const myMonths = months.with(2, "March");
+        console.log(myMonths);
+
+        // spread (...)
+        const q1 = ["Jan", "Feb", "Mar"];
+        const q2 = ["Apr", "May", "Jun"];
+        const q3 = ["Jul", "Aug", "Sep"];
+        const q4 = ["Oct", "Nov", "Dec"];
+        const year = [...q1, ...q2, ...q3, ...q4];
+        console.log(year);
+    </script>
+</body>
+</html>
