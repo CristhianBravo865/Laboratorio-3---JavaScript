@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        // Example
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        console.log(person.fullName());  // "John Doe"
+
+        // What is this?
+        // this refers to different objects depending on how it is used
+
+
+        // this in a Method
+        const personMethod = {
+            firstName: "John",
+            lastName: "Doe",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        console.log(personMethod.fullName()); // "John Doe"
+
+
+        // this Alone
+        let x = this;
+        console.log(x);  // [object Window] (in browser)
+
+        // In strict mode, this is undefined
+        "use strict";
+        let y = this;
+        console.log(y);  // undefined
+
+
+        // this in a Function (Default)
+        function myFunction() {
+            return this;
+        }
+        console.log(myFunction());  // [object Window] (in browser)
+
+
+        // this in a Function (Strict)
+        "use strict";
+        function myStrictFunction() {
+            return this;
+        }
+        console.log(myStrictFunction());  // undefined
+
+
+        // this in Event Handlers
+        let button = document.createElement("button");
+        button.innerHTML = "Click to Remove Me!";
+        button.onclick = function () {
+            this.style.display = 'none';
+        }
+        document.body.appendChild(button);
+
+
+        // Object Method Binding
+        const personBinding = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            myFunction: function () {
+                return this;
+            }
+        };
+        console.log(personBinding.myFunction());  // {firstName: "John", lastName: "Doe", id: 5566, myFunction: f}
+
+
+        // Explicit Function Binding
+        const person1 = {
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        const person2 = {
+            firstName: "John",
+            lastName: "Doe",
+        };
+
+        console.log(person1.fullName.call(person2));  // "John Doe"
+
+
+        // Function Borrowing
+        const person3 = {
+            firstName: "John",
+            lastName: "Doe",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        const member = {
+            firstName: "Hege",
+            lastName: "Nilsen",
+        };
+
+        let fullName = person3.fullName.bind(member);
+        console.log(fullName());  // "Hege Nilsen"
+    </script>
+</body>
+</html>
