@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        // Arrow functions allow us to write shorter function syntax
+
+        let myFunction = (a, b) => a * b;
+        console.log(myFunction(2, 3));  // 6
+
+        // Before Arrow
+        hello = function () {
+            return "Hello World!";
+        }
+
+        // With Arrow Function
+        hello = () => {
+            return "Hello World!";
+        }
+
+        // Arrow Functions Return Value by Default
+        hello = () => "Hello World!";
+        console.log(hello());  // "Hello World!"
+
+        // Arrow Function With Parameters
+        hello = (val) => "Hello " + val;
+        console.log(hello("John"));  // "Hello John"
+
+        // Arrow Function Without Parentheses
+        hello = val => "Hello " + val;
+        console.log(hello("Jane"));  // "Hello Jane"
+
+        // What About this?
+        // The handling of this is also different in arrow functions compared to regular functions
+
+        // Regular Function:
+        hello = function () {
+            document.getElementById("demo").innerHTML += this;
+        }
+
+        // The window object calls the function:
+        window.addEventListener("load", hello);
+
+        // A button object calls the function:
+        document.getElementById("btn").addEventListener("click", hello);
+
+        // Arrow Function:
+        hello = () => {
+            document.getElementById("demo").innerHTML += this;
+        }
+
+        // The window object calls the function:
+        window.addEventListener("load", hello);
+
+        // A button object calls the function:
+        document.getElementById("btn").addEventListener("click", hello);
+
+    </script>
+</body>
+</html>
