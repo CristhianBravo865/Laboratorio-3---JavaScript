@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        // Crear fecha actual
+        const d1 = new Date();
+        console.log(d1);
+
+        // Crear fecha a partir de una cadena
+        const d2 = new Date("2022-03-25");
+        console.log(d2);
+
+        // Crear fecha con año, mes, día, hora, minuto, segundo, milisegundo
+        const d3 = new Date(2018, 11, 24, 10, 33, 30, 0);
+        console.log(d3);
+
+        // Mes mayor a 11 (se suma al siguiente año)
+        const d4 = new Date(2018, 15, 24, 10, 33, 30);
+        console.log(d4);
+
+        // Día mayor al máximo (se suma al siguiente mes)
+        const d5 = new Date(2018, 5, 35, 10, 33, 30);
+        console.log(d5);
+
+        // Usando 6 números: año, mes, día, hora, minuto, segundo
+        const d6 = new Date(2018, 11, 24, 10, 33, 30);
+        console.log(d6);
+
+        // Usando 5 números: año, mes, día, hora, minuto
+        const d7 = new Date(2018, 11, 24, 10, 33);
+        console.log(d7);
+
+        // Usando 4 números: año, mes, día, hora
+        const d8 = new Date(2018, 11, 24, 10);
+        console.log(d8);
+
+        // Usando 3 números: año, mes, día
+        const d9 = new Date(2018, 11, 24);
+        console.log(d9);
+
+        // Usando 2 números: año, mes
+        const d10 = new Date(2018, 11);
+        console.log(d10);
+
+        // Un solo número se interpreta como milisegundos desde 01/01/1970
+        const d11 = new Date(2018);
+        console.log(d11);
+
+        // Años de 1 o 2 dígitos se interpretan como 19xx
+        const d12 = new Date(99, 11, 24);
+        console.log(d12);
+
+        const d13 = new Date(9, 11, 24);
+        console.log(d13);
+
+        // Crear fecha desde milisegundos
+        const d14 = new Date(100000000000);
+        console.log(d14);
+
+        const d15 = new Date(-100000000000);
+        console.log(d15);
+
+        const d16 = new Date(24 * 60 * 60 * 1000); // 24 horas
+        console.log(d16);
+
+        const d17 = new Date(0); // 0 milisegundos
+        console.log(d17);
+
+        // Métodos para mostrar fechas
+        const d18 = new Date();
+        console.log(d18.toString());      // Texto completo con zona horaria
+        console.log(d18.toDateString());  // Solo fecha, formato amigable
+        console.log(d18.toUTCString());   // Formato UTC
+        console.log(d18.toISOString());   // Formato ISO
+    </script>
+</body>
+</html>
