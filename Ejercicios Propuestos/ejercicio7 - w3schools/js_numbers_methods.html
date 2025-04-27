@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+    <script>
+        // Métodos básicos
+        let x = 123;
+        console.log(x.toString());
+        console.log((123).toString());
+        console.log((100 + 23).toString());
+
+        let y = 9.656;
+        console.log(y.toExponential(2));
+        console.log(y.toExponential(4));
+        console.log(y.toExponential(6));
+
+        console.log(y.toFixed(0));
+        console.log(y.toFixed(2));
+        console.log(y.toFixed(4));
+        console.log(y.toFixed(6));
+
+        console.log(y.toPrecision());
+        console.log(y.toPrecision(2));
+        console.log(y.toPrecision(4));
+        console.log(y.toPrecision(6));
+
+        console.log(x.valueOf());
+        console.log((123).valueOf());
+        console.log((100 + 23).valueOf());
+
+        // Convertir variables a números
+        console.log(Number(true));
+        console.log(Number(false));
+        console.log(Number("10"));
+        console.log(Number("  10"));
+        console.log(Number("10  "));
+        console.log(Number(" 10  "));
+        console.log(Number("10.33"));
+        console.log(Number("10,33"));
+        console.log(Number("10 33"));
+        console.log(Number("John"));
+
+        // Number con fechas
+        console.log(Number(new Date("1970-01-01")));
+        console.log(Number(new Date("1970-01-02")));
+        console.log(Number(new Date("2017-09-30")));
+
+        // parseInt ejemplos
+        console.log(parseInt("-10"));
+        console.log(parseInt("-10.33"));
+        console.log(parseInt("10"));
+        console.log(parseInt("10.33"));
+        console.log(parseInt("10 20 30"));
+        console.log(parseInt("10 years"));
+        console.log(parseInt("years 10"));
+
+        // parseFloat ejemplos
+        console.log(parseFloat("10"));
+        console.log(parseFloat("10.33"));
+        console.log(parseFloat("10 20 30"));
+        console.log(parseFloat("10 years"));
+        console.log(parseFloat("years 10"));
+
+        // Métodos de objeto Number
+        console.log(Number.isInteger(10));
+        console.log(Number.isInteger(10.5));
+        console.log(Number.isSafeInteger(10));
+        console.log(Number.isSafeInteger(12345678901234567890));
+
+        console.log(Number.parseFloat("10"));
+        console.log(Number.parseFloat("10.33"));
+        console.log(Number.parseFloat("10 20 30"));
+        console.log(Number.parseFloat("10 years"));
+        console.log(Number.parseFloat("years 10"));
+
+        console.log(Number.parseInt("-10"));
+        console.log(Number.parseInt("-10.33"));
+        console.log(Number.parseInt("10"));
+        console.log(Number.parseInt("10.33"));
+        console.log(Number.parseInt("10 20 30"));
+        console.log(Number.parseInt("10 years"));
+        console.log(Number.parseInt("years 10"));
+    </script>
+</body>
+</html>
