@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+    <h1>Resumen JavaScript Numbers</h1>
+    <h2>Tipo Único de Número</h2>
+    <p>JavaScript usa un solo tipo de número (con o sin decimales).</p>
+    <p>Ejemplos:</p>
+    <ul>
+        <li>let x = 3.14;</li>
+        <li>let y = 3;</li>
+    </ul>
+    <h2>Notación Científica</h2>
+    <p>Se pueden escribir números grandes o pequeños usando "e":</p>
+    <ul>
+        <li>let x = 123e5; // 12300000</li>
+        <li>let y = 123e-5; // 0.00123</li>
+    </ul>
+
+    <h2>Siempre en 64 bits</h2>
+    <p>Todos los números siguen el formato IEEE 754 de 64 bits.</p>
+
+    <h2>Precisión de Enteros</h2>
+    <p>Los enteros son exactos hasta 15 dígitos:</p>
+    <ul>
+        <li>999999999999999 -> correcto</li>
+        <li>9999999999999999 -> error, se redondea</li>
+    </ul>
+
+    <h2>Precisión de Decimales</h2>
+    <p>Las operaciones con decimales no siempre son exactas:</p>
+    <ul>
+        <li>0.2 + 0.1 // no da exactamente 0.3</li>
+        <li>Solución: (0.2 * 10 + 0.1 * 10) / 10;</li>
+    </ul>
+
+    <h2>Suma de Números y Strings</h2>
+    <p>El operador + puede sumar o concatenar:</p>
+    <ul>
+        <li>10 + 20 -> 30 (suma)</li>
+        <li>"10" + "20" -> "1020" (texto)</li>
+        <li>10 + "20" -> "1020" (texto)</li>
+    </ul>
+
+    <p>Importante: se evalúa de izquierda a derecha.</p>
+
+    <h2>Cadenas Numéricas</h2>
+    <p>JavaScript intenta convertir textos numéricos cuando puede:</p>
+    <ul>
+        <li>"100" / "10" -> 10</li>
+        <li>"100" - "10" -> 90</li>
+        <li>"100" + "10" -> "10010" (concatenación)</li>
+    </ul>
+
+    <h2>NaN (Not a Number)</h2>
+    <p>NaN aparece si el cálculo no es válido:</p>
+    <ul>
+        <li>100 / "Apple" -> NaN</li>
+        <li>isNaN(x) // para verificar si es NaN</li>
+        <li>typeof NaN -> "number"</li>
+    </ul>
+
+    <h2>Infinity</h2>
+    <p>Infinity aparece si el número es demasiado grande o se divide entre 0:</p>
+    <ul>
+        <li>2 / 0 -> Infinity</li>
+        <li>-2 / 0 -> -Infinity</li>
+        <li>typeof Infinity -> "number"</li>
+    </ul>
+
+    <h2>Hexadecimal y Otras Bases</h2>
+    <p>Si un número empieza con 0x, es hexadecimal:</p>
+    <ul>
+        <li>0xFF -> 255</li>
+        <li>toString(base) permite mostrar en otras bases:</li>
+        <li>32.toString(2) -> "100000" (binario)</li>
+        <li>32.toString(8) -> "40" (octal)</li>
+        <li>32.toString(16) -> "20" (hexadecimal)</li>
+    </ul>
+
+    <h2>Números como Objetos</h2>
+    <p>Se pueden crear objetos Number (pero no es recomendable):</p>
+    <ul>
+        <li>let x = 123; // normal</li>
+        <li>let y = new Number(123); // objeto</li>
+    </ul>
+
+    <p>Comparaciones:</p>
+    <ul>
+        <li>x == y -> true</li>
+        <li>x === y -> false</li>
+        <li>Comparar dos objetos siempre da false (===).</li>
+    </ul>
+
+    <h2>Referencia Completa</h2>
+    <p>Para más detalles: buscar "JavaScript Number Reference".</p>
+
+</body>
+
+</html>
