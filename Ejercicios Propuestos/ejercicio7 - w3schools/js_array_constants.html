@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        const cars1 = ["Saab", "Volvo", "BMW"];
+        console.log(cars1);
+
+        // Esto genera error si se intenta hacer:
+        // cars1 = ["Toyota", "Volvo", "Audi"];
+
+        const cars2 = ["Saab", "Volvo", "BMW"];
+        cars2[0] = "Toyota";
+        cars2.push("Audi");
+        console.log(cars2);
+
+        // Esto genera error si se hace:
+        // const cars3;
+        // cars3 = ["Saab", "Volvo", "BMW"];
+
+        cars4 = ["Saab", "Volvo", "BMW"];
+        var cars4;
+        console.log(cars4);
+
+        const cars5 = ["Saab", "Volvo", "BMW"];
+        {
+            const cars5 = ["Toyota", "Volvo", "BMW"];
+            console.log(cars5[0]);
+        }
+        console.log(cars5[0]);
+
+        var cars6 = ["Saab", "Volvo", "BMW"];
+        {
+            var cars6 = ["Toyota", "Volvo", "BMW"];
+        }
+        console.log(cars6[0]);
+
+        var cars7 = ["Volvo", "BMW"];
+        var cars7 = ["Toyota", "BMW"];
+        cars7 = ["Volvo", "Saab"];
+        console.log(cars7);
+
+        const cars8 = ["Volvo", "BMW"];
+        // No se puede hacer:
+        // const cars8 = ["Volvo", "BMW"];
+        // var cars8 = ["Volvo", "BMW"];
+        // cars8 = ["Volvo", "BMW"];
+
+        {
+            const cars9 = ["Volvo", "BMW"];
+            // No se puede hacer:
+            // const cars9 = ["Volvo", "BMW"];
+            // var cars9 = ["Volvo", "BMW"];
+            // cars9 = ["Volvo", "BMW"];
+        }
+
+        const cars10 = ["Volvo", "BMW"];
+        {
+            const cars10 = ["Volvo", "BMW"];
+        }
+        {
+            const cars10 = ["Volvo", "BMW"];
+        }
+    </script>
+</body>
+</html>
