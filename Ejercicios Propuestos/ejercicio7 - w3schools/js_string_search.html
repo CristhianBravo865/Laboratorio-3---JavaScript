@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        let text = "Please locate where 'locate' occurs!";
+        let index = text.indexOf("locate");
+        console.log(index);
+
+        let lastIndex = text.lastIndexOf("locate");
+        console.log(lastIndex);
+
+        let notFoundIndex = text.lastIndexOf("John");
+        console.log(notFoundIndex);
+
+        let indexFromPosition = text.indexOf("locate", 15);
+        console.log(indexFromPosition);
+
+        let lastIndexFromPosition = text.lastIndexOf("locate", 15);
+        console.log(lastIndexFromPosition);
+
+        let searchIndex = text.search("locate");
+        console.log(searchIndex);
+
+        let searchRegex = text.search(/locate/);
+        console.log(searchRegex);
+
+        let text2 = "The rain in SPAIN stays mainly in the plain";
+        let matchResult1 = text2.match("ain");
+        console.log(matchResult1);
+
+        let matchResult2 = text2.match(/ain/);
+        console.log(matchResult2);
+
+        let matchResult3 = text2.match(/ain/g);
+        console.log(matchResult3);
+
+        let matchResult4 = text2.match(/ain/gi);
+        console.log(matchResult4);
+
+        const iterator1 = text2.matchAll("ain");
+        console.log(Array.from(iterator1));
+
+        const iterator2 = text2.matchAll(/ain/g);
+        console.log(Array.from(iterator2));
+
+        const iterator3 = text2.matchAll(/ain/gi);
+        console.log(Array.from(iterator3));
+
+        let text3 = "Hello world, welcome to the universe.";
+        let includesResult = text3.includes("world");
+        console.log(includesResult);
+
+        let includesResultFromPos = text3.includes("world", 12);
+        console.log(includesResultFromPos);
+
+        let startsWithResult1 = text3.startsWith("Hello");
+        console.log(startsWithResult1);
+
+        let startsWithResult2 = text3.startsWith("world");
+        console.log(startsWithResult2);
+
+        let startsWithResult3 = text3.startsWith("world", 5);
+        console.log(startsWithResult3);
+
+        let startsWithResult4 = text3.startsWith("world", 6);
+        console.log(startsWithResult4);
+
+        let text4 = "John Doe";
+        let endsWithResult1 = text4.endsWith("Doe");
+        console.log(endsWithResult1);
+
+        let endsWithResult2 = text3.endsWith("world", 11);
+        console.log(endsWithResult2);
+    </script>
+
+</body>
+
+</html>
