@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        // Bitwise AND (&)
+        let x = 5 & 1;
+        console.log(x);
+
+        // Bitwise OR (|)
+        let y = 5 | 1;
+        console.log(y);
+
+        // Bitwise XOR (^)
+        let z = 5 ^ 1;
+        console.log(z);
+
+        // Bitwise NOT (~)
+        let a = ~5;
+        console.log(a);
+
+        // Zero Fill Left Shift (<<)
+        let b = 5 << 1;
+        console.log(b);
+
+        // Signed Right Shift (>>)
+        let c = -5 >> 1;
+        console.log(c);
+
+        // Zero Fill Right Shift (>>>)
+        let d = 5 >>> 1;
+        console.log(d);
+
+        // Converting Decimal to Binary
+        function dec2bin(dec) {
+            return (dec >>> 0).toString(2);
+        }
+        console.log(dec2bin(5));
+
+        // Converting Binary to Decimal
+        function bin2dec(bin) {
+            return parseInt(bin, 2).toString(10);
+        }
+        console.log(bin2dec("101"));
+    </script>
+</body>
+</html>
