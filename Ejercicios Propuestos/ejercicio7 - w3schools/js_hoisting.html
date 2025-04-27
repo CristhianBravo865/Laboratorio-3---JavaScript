@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+
+    <script>
+        // JavaScript Declarations are Hoisted
+        var x1;
+        x1 = 5;
+        document.getElementById("demo1").innerHTML = x1;
+
+        var x2;
+        x2 = 5;
+        document.getElementById("demo2").innerHTML = x2;
+
+        // The let and const Keywords
+        // let ejemplo (ReferenceError esperado)
+        // Este ejemplo es solo teórico, no se ejecuta para evitar error
+        // carName1 = "Volvo";
+        // let carName1;
+
+        // const ejemplo (SyntaxError esperado)
+        // Este ejemplo también es solo teórico, no se ejecuta para evitar error
+        // carName2 = "Volvo";
+        // const carName2;
+
+        // JavaScript Initializations are Not Hoisted
+        var x3 = 5;
+        var y3 = 7;
+        document.getElementById("demo3").innerHTML = x3 + " " + y3;
+
+        var x4 = 5;
+        document.getElementById("demo4").innerHTML = x4 + " " + y4;
+        var y4 = 7;
+
+        // Equivalente a:
+        var x5 = 5;
+        var y5;
+        document.getElementById("demo5").innerHTML = x5 + " " + y5;
+        y5 = 7;
+    </script>
+
+    <div id="demo1"></div>
+    <div id="demo2"></div>
+    <div id="demo3"></div>
+    <div id="demo4"></div>
+    <div id="demo5"></div>
+
+</body>
+</html>
