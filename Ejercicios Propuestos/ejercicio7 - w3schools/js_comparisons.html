@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+
+    <script>
+        // Comparación
+        let x = 5;
+        console.log(x == 8); // false
+        console.log(x == 5); // true
+        console.log(x == "5"); // true
+        console.log(x === 5); // true
+        console.log(x === "5"); // false
+        console.log(x != 8); // true
+        console.log(x !== 5); // false
+        console.log(x !== "5"); // true
+        console.log(x > 8); // false
+        console.log(x < 8); // true
+        console.log(x >= 8); // false
+        console.log(x <= 8); // true
+
+        // Lógicos
+        let y = 3;
+        console.log(x < 10 && y > 1); // true
+        console.log(x == 5 || y == 5); // false
+        console.log(!(x == y)); // true
+
+        // Operador Condicional
+        let age = 16;
+        let voteable = (age < 18) ? "Too young" : "Old enough";
+        console.log(voteable); // "Too young"
+
+        // Comparar diferentes tipos
+        console.log(2 < 12); // true
+        console.log(2 < "12"); // true
+        console.log(2 < "John"); // false
+        console.log(2 > "John"); // false
+        console.log(2 == "John"); // false
+        console.log("2" < "12"); // false
+        console.log("2" > "12"); // true
+        console.log("2" == "12"); // false
+
+        // Comparación segura
+        age = Number(age);
+        if (isNaN(age)) {
+            voteable = "Input is not a number";
+        } else {
+            voteable = (age < 18) ? "Too young" : "Old enough";
+        }
+        console.log(voteable); // "Too young"
+
+        // Nullish Coalescing
+        let name = null;
+        let text = "missing";
+        let result = name ?? text;
+        console.log(result); // "missing"
+
+        // Optional Chaining
+        const car = { type: "Fiat", model: "500", color: "white" };
+        document.getElementById("demo").innerHTML = car?.name;
+    </script>
+
+</body>
+
+</html>
