@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        let cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+        let text = "";
+
+        // For Loop
+        for (let i = 0; i < cars.length; i++) {
+            text += cars[i] + "<br>";
+        }
+        console.log(text);
+
+        // Expression 1
+        let i = 2;
+        let len = cars.length;
+        text = "";
+        for (; i < len; i++) {
+            text += cars[i] + "<br>";
+        }
+        console.log(text);
+
+        // Expression 2
+        for (i = 0, len = cars.length, text = ""; i < len; i++) {
+            text += cars[i] + "<br>";
+        }
+        console.log(text);
+
+        // Expression 3
+        i = 0;
+        text = "";
+        for (; i < len;) {
+            text += cars[i] + "<br>";
+            i++;
+        }
+        console.log(text);
+
+        // Loop Scope with var
+        var j = 5;
+        for (var j = 0; j < 10; j++) {
+            // some code
+        }
+        console.log(j);
+
+        // Loop Scope with let
+        let k = 5;
+        for (let i = 0; i < 10; i++) {
+            // some code
+        }
+        console.log(k); 
+    </script>
+</body>
+</html>
