@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Use Strict</title>
+</head>
+<body>
+
+<script>
+// Declaring Strict Mode - Global Scope
+"use strict";
+// Esto causará un error porque la variable x no está declarada
+x = 3.14;
+
+myFunction();
+// Esto causará un error porque la variable y no está declarada
+function myFunction() {
+  y = 3.14;
+}
+
+// Declaring Strict Mode - Local Scope
+x = 3.14;
+myFunction2();
+// Esto causará un error porque la variable y no está declarada dentro de la función
+function myFunction2() {
+  "use strict";
+  y = 3.14;
+}
+
+// The "use strict"; Syntax
+
+// Why Strict Mode
+
+// Not Allowed in Strict Mode
+// Usar variables sin declarar
+"use strict";
+// Esto causará un error porque la variable x no está declarada
+x = 3.14;
+
+// Usar objetos sin declarar
+"use strict";
+// Esto causará un error porque el objeto x no está declarado
+x = {p1:10, p2:20};
+
+// Eliminar variables
+"use strict";
+let x = 3.14;
+// Esto causará un error porque no se puede eliminar una variable
+delete x;
+
+// Eliminar funciones
+"use strict";
+function x(p1, p2) {}
+// Esto causará un error porque no se puede eliminar una función
+delete x;
+
+// Duplicar nombres de parámetros
+"use strict";
+// Esto causará un error porque no se puede duplicar un parámetro
+function x(p1, p1) {}
+
+// Literales octales
+"use strict";
+// Esto causará un error porque los literales octales no están permitidos
+let x = 010;
+
+// Caracteres de escape octales
+"use strict";
+// Esto causará un error porque los caracteres de escape octales no están permitidos
+let x = "\010";
+
+// Escribir en una propiedad de solo lectura
+"use strict";
+const obj = {};
+Object.defineProperty(obj, "x", {value:0, writable:false});
+// Esto causará un error porque no se puede escribir en una propiedad de solo lectura
+obj.x = 3.14;
+
+// Escribir en una propiedad solo de lectura
+"use strict";
+const obj2 = {get x() {return 0}};
+// Esto causará un error porque no se puede escribir en una propiedad de solo lectura
+obj2.x = 3.14;
+
+// Eliminar una propiedad no eliminable
+"use strict";
+// Esto causará un error porque no se puede eliminar una propiedad no eliminable
+delete Object.prototype;
+
+// Usar palabras reservadas (eval, arguments)
+"use strict";
+// Esto causará un error porque "eval" no se puede usar como variable
+let eval = 3.14;
+
+"use strict";
+// Esto causará un error porque "arguments" no se puede usar como variable
+let arguments = 3.14;
+
+// Usar la sentencia with
+"use strict";
+// Esto causará un error porque la sentencia "with" no está permitida
+with (Math){x = cos(2);}
+
+// Restricciones de eval()
+"use strict";
+try {
+  eval("x = 2");
+  alert(x);
+} catch (error) {
+  console.log(error);
+}
+
+try {
+  eval("var x = 2");
+  alert(x);
+} catch (error) {
+  console.log(error);
+}
+
+try {
+  eval("let x = 2");
+  alert(x);
+} catch (error) {
+  console.log(error);
+}
+
+// Comportamiento de this en modo estricto
+"use strict";
+function myFunction3() {
+  // Esto mostrará "undefined" porque en modo estricto, "this" no hace referencia al objeto global
+  console.log(this);
+}
+myFunction3();
+
+// Palabras reservadas para futuras versiones
+"use strict";
+// Esto causará un error porque "public" es una palabra reservada para futuras versiones de JavaScript
+let public = 1500;
+</script>
+
+</body>
+</html>
