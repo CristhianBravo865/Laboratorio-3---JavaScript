@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        let hour = 14;
+        let greeting;
+
+        if (hour < 18) {
+            greeting = "Good day";
+        }
+        console.log(greeting);
+
+        if (hour < 18) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+        console.log(greeting);
+
+        let time = 15;
+        if (time < 10) {
+            greeting = "Good morning";
+        } else if (time < 20) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+        console.log(greeting);
+
+        let text;
+        if (Math.random() < 0.5) {
+            text = "<a href='https://w3schools.com'>Visit W3Schools</a>";
+        } else {
+            text = "<a href='https://wwf.org'>Visit WWF</a>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    <p id="demo"></p>
+</body>
+</html>
