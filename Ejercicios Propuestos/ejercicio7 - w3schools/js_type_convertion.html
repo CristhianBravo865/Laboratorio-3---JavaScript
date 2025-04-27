@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        // Converting Strings to Numbers
+        let num1 = Number("3.14");
+        let num2 = Number(" ");
+        let num3 = Number("John");
+
+        console.log(num1); // 3.14
+        console.log(num2); // 0
+        console.log(num3); // NaN
+
+        // Converting Numbers to Strings
+        let num = 123;
+        let str1 = String(num);
+        let str2 = num.toString();
+
+        console.log(str1); // "123"
+        console.log(str2); // "123"
+
+        // Converting Dates to Numbers
+        let date = new Date();
+        let numDate = Number(date);
+        let time = date.getTime();
+
+        console.log(numDate); // Timestamp in milliseconds
+        console.log(time); // Timestamp in milliseconds
+
+        // Converting Dates to Strings
+        let strDate = String(date);
+        let dateStr = date.toString();
+
+        console.log(strDate); // "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+        console.log(dateStr); // "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+
+        // Converting Booleans to Numbers
+        let bool1 = Number(false);
+        let bool2 = Number(true);
+
+        console.log(bool1); // 0
+        console.log(bool2); // 1
+
+        // Converting Booleans to Strings
+        let strBool1 = String(false);
+        let strBool2 = String(true);
+
+        console.log(strBool1); // "false"
+        console.log(strBool2); // "true"
+
+        // Automatic Type Conversion
+        let sum1 = 5 + null;  // 5
+        let sum2 = "5" + null;  // "5null"
+        let sum3 = "5" + 2;  // "52"
+        let sum4 = "5" - 2;  // 3
+        let product = "5" * "2";  // 10
+
+        console.log(sum1); // 5
+        console.log(sum2); // "5null"
+        console.log(sum3); // "52"
+        console.log(sum4); // 3
+        console.log(product); // 10
+
+        // Automatic String Conversion
+        let obj = { name: "John" };
+        let arr = [1, 2, 3, 4];
+        let dateObj = new Date();
+
+        console.log(obj.toString()); // "[object Object]"
+        console.log(arr.toString()); // "1,2,3,4"
+        console.log(dateObj.toString()); // "Fri Jul 18 2014 09:08:55 GMT+0200"
+
+        // JavaScript Type Conversion Table
+        let values = [
+            false, true, 0, 1, "0", "000", "1", NaN, Infinity, -Infinity, "", "20", "twenty", [], [20], [10, 20], ["twenty"], ["ten", "twenty"], function () { }, {}, null, undefined
+        ];
+
+        values.forEach(value => {
+            console.log(`Original: ${value}, to Number: ${Number(value)}, to String: ${String(value)}, to Boolean: ${Boolean(value)}`);
+        });
+    </script>
+</body>
+</html>
