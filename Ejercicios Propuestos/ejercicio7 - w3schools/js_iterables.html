@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        // For Of Loop
+        const name = "W3Schools";
+        for (const x of name) {
+            console.log(x);
+        }
+
+        // Iterating Over an Array
+        const letters = ["a", "b", "c"];
+        for (const x of letters) {
+            console.log(x);
+        }
+
+        const numbers = [2, 4, 6, 8];
+        for (const x of numbers) {
+            console.log(x);
+        }
+
+        // Iterating Over a Set
+        const lettersSet = new Set(["a", "b", "c"]);
+        for (const x of lettersSet) {
+            console.log(x);
+        }
+
+        // Iterating Over a Map
+        const fruits = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+        ]);
+        for (const x of fruits) {
+            console.log(x);
+        }
+
+        // Home Made Iterable
+        function myNumbers() {
+            let n = 0;
+            return {
+                next: function () {
+                    n += 10;
+                    return { value: n, done: false };
+                }
+            };
+        }
+
+        const n = myNumbers();
+        console.log(n.next()); // Returns 10
+        console.log(n.next()); // Returns 20
+        console.log(n.next()); // Returns 30
+
+        // Create Object and Make it Iterable
+        let myNumbersObject = {};
+
+        myNumbersObject[Symbol.iterator] = function () {
+            let n = 0;
+            let done = false;
+            return {
+                next() {
+                    n += 10;
+                    if (n == 100) { done = true; }
+                    return { value: n, done: done };
+                }
+            };
+        };
+
+        // Using For..Of with Iterable
+        for (const num of myNumbersObject) {
+            console.log(num);
+        }
+
+        // Using the Iterator Directly
+        let iterator = myNumbersObject[Symbol.iterator]();
+        while (true) {
+            const result = iterator.next();
+            if (result.done) break;
+            console.log(result.value);
+        }
+    </script>
+</body>
+</html>
