@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        // Primitive Data Types
+        console.log(typeof "John");         // Returns string
+        console.log(typeof ("John" + "Doe")); // Returns string
+        console.log(typeof 3.14);           // Returns number
+        console.log(typeof 33);             // Returns number
+        console.log(typeof (33 + 66));      // Returns number
+        console.log(typeof true);           // Returns boolean
+        console.log(typeof false);          // Returns boolean
+        console.log(typeof 1234n);          // Returns bigint
+        console.log(typeof Symbol());       // Returns symbol
+        console.log(typeof x);              // Returns undefined
+        console.log(typeof null);           // Returns object
+
+        // Complex Data Types
+        console.log(typeof { name: 'John' });   // Returns object
+        console.log(typeof [1, 2, 3, 4]);       // Returns object
+        console.log(typeof new Map());       // Returns object
+        console.log(typeof new Set());       // Returns object
+
+        console.log(typeof function () { });   // Returns function
+
+        // How to Recognize an Array
+        const fruits = ["apples", "bananas", "oranges"];
+        console.log(Array.isArray(fruits));  // Returns true
+
+        // The instanceof Operator
+        const time = new Date();
+        console.log(time instanceof Date);   // Returns true
+
+        const fruitsArray = ["apples", "bananas", "oranges"];
+        console.log(fruitsArray instanceof Array);   // Returns true
+
+        const fruitsMap = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+        ]);
+        console.log(fruitsMap instanceof Map);  // Returns true
+
+        const fruitsSet = new Set(["apples", "bananas", "oranges"]);
+        console.log(fruitsSet instanceof Set);  // Returns true
+
+        // Undefined Variables
+        let car;
+        console.log(typeof car);  // Returns undefined
+
+        let car2 = "Volvo";
+        car2 = undefined;
+        console.log(typeof car2);  // Returns undefined
+
+        // Empty Values
+        let car3 = "";
+        console.log(typeof car3);  // Returns string
+
+        // Null
+        let person = { firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue" };
+        person = null;
+        console.log(typeof person);  // Returns object
+
+        person = undefined;
+        console.log(typeof person);  // Returns undefined
+
+        // Difference Between Undefined and Null
+        console.log(typeof undefined); // undefined
+        console.log(typeof null);      // object
+        console.log(null === undefined); // false
+        console.log(null == undefined);  // true
+
+        // The constructor Property
+        console.log(({ name: 'John', age: 34 }.constructor));  // Returns function Object() {[native code]}
+        console.log([1, 2, 3, 4].constructor);  // Returns function Array() {[native code]}
+        console.log(new Date().constructor);  // Returns function Date() {[native code]}
+        console.log(new Set().constructor);  // Returns function Set() {[native code]}
+        console.log(new Map().constructor);  // Returns function Map() {[native code]}
+        console.log(function () { }.constructor);  // Returns function Function() {[native code]}
+
+        // All Together
+        console.log(typeof "John");          // Returns "string"
+        console.log(typeof ("John" + "Doe"));  // Returns "string"
+        console.log(typeof 3.14);            // Returns "number"
+        console.log(typeof (33 + 66));       // Returns "number"
+        console.log(typeof NaN);             // Returns "number"
+        console.log(typeof 1234n);           // Returns "bigint"
+        console.log(typeof true);            // Returns "boolean"
+        console.log(typeof false);           // Returns "boolean"
+        console.log(typeof { name: 'John' });   // Returns "object"
+        console.log(typeof [1, 2, 3, 4]);       // Returns "object"
+        console.log(typeof {});              // Returns "object"
+        console.log(typeof []);              // Returns "object"
+        console.log(typeof new Object());    // Returns "object"
+        console.log(typeof new Array());     // Returns "object"
+        console.log(typeof new Date());      // Returns "object"
+        console.log(typeof new Set());       // Returns "object"
+        console.log(typeof new Map());       // Returns "object"
+        console.log(typeof function () { });  // Returns "function"
+        console.log(typeof x);               // Returns "undefined"
+        console.log(typeof null);            // Returns "object"
+
+        // The void Operator
+        console.log("Example of void operator:");
+        console.log("javascript:void(0);");
+        console.log("javascript:void(document.body.style.backgroundColor='red');");
+    </script>
+</body>
+</html>
