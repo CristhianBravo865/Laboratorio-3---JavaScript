@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+    <script>
+        console.log(Math.random());
+
+        console.log(Math.floor(Math.random() * 10));
+
+        console.log(Math.floor(Math.random() * 11));
+
+        console.log(Math.floor(Math.random() * 100));
+
+        console.log(Math.floor(Math.random() * 101));
+
+        console.log(Math.floor(Math.random() * 10) + 1);
+
+        console.log(Math.floor(Math.random() * 100) + 1);
+
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        console.log(getRndInteger(5, 15));
+
+        function getRndIntegerInclusive(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(getRndIntegerInclusive(5, 15));
+    </script>
+</body>
+
+</html>
