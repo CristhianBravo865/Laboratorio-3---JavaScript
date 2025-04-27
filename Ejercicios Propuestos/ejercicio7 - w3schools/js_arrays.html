@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+    <script>
+        // Crear arrays
+        const cars1 = ["Saab", "Volvo", "BMW"];
+        console.log(cars1);
+
+        const cars2 = [
+            "Saab",
+            "Volvo",
+            "BMW"
+        ];
+        console.log(cars2);
+
+        const cars3 = [];
+        cars3[0] = "Saab";
+        cars3[1] = "Volvo";
+        cars3[2] = "BMW";
+        console.log(cars3);
+
+        const cars4 = new Array("Saab", "Volvo", "BMW");
+        console.log(cars4);
+
+        // Acceder y modificar elementos
+        const cars5 = ["Saab", "Volvo", "BMW"];
+        let car = cars5[0];
+        console.log(car);
+
+        cars5[0] = "Opel";
+        console.log(cars5);
+
+        // Convertir array a string
+        const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+        console.log(fruits1.toString());
+
+        // Mostrar array completo
+        const cars6 = ["Saab", "Volvo", "BMW"];
+        console.log(cars6);
+
+        // Arrays y objetos
+        const personArray = ["John", "Doe", 46];
+        console.log(personArray[0]);
+
+        const personObject = { firstName: "John", lastName: "Doe", age: 46 };
+        console.log(personObject.firstName);
+
+        // Arrays con diferentes tipos de datos
+        const myArray = [];
+        myArray[0] = Date.now;
+        myArray[1] = function () { return "Hello"; };
+        myArray[2] = ["Saab", "Volvo", "BMW"];
+        console.log(myArray);
+
+        // Propiedades y métodos
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        console.log(fruits2.length);
+
+        const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+        console.log(fruits3[0]);
+        console.log(fruits3[fruits3.length - 1]);
+
+        // Recorrer arrays
+        const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+        let text1 = "<ul>";
+        for (let i = 0; i < fruits4.length; i++) {
+            text1 += "<li>" + fruits4[i] + "</li>";
+        }
+        text1 += "</ul>";
+        console.log(text1);
+
+        let text2 = "<ul>";
+        fruits4.forEach(function (value) {
+            text2 += "<li>" + value + "</li>";
+        });
+        text2 += "</ul>";
+        console.log(text2);
+
+        // Agregar elementos
+        const fruits5 = ["Banana", "Orange", "Apple"];
+        fruits5.push("Lemon");
+        console.log(fruits5);
+
+        const fruits6 = ["Banana", "Orange", "Apple"];
+        fruits6[fruits6.length] = "Lemon";
+        console.log(fruits6);
+
+        // Crear huecos en arrays
+        const fruits7 = ["Banana", "Orange", "Apple"];
+        fruits7[6] = "Lemon";
+        console.log(fruits7);
+
+        // Arrays vs Objetos
+        const personArray2 = [];
+        personArray2[0] = "John";
+        personArray2[1] = "Doe";
+        personArray2[2] = 46;
+        console.log(personArray2.length);
+        console.log(personArray2[0]);
+
+        const personObject2 = [];
+        personObject2["firstName"] = "John";
+        personObject2["lastName"] = "Doe";
+        personObject2["age"] = 46;
+        console.log(personObject2.length);
+        console.log(personObject2[0]);
+
+        // Diferencias
+        const points1 = new Array();
+        const points2 = [];
+        console.log(points1, points2);
+
+        const points3 = new Array(40, 100, 1, 5, 25, 10);
+        const points4 = [40, 100, 1, 5, 25, 10];
+        console.log(points3, points4);
+
+        const points5 = new Array(40);
+        console.log(points5);
+
+        // Cómo saber si es array
+        const fruits8 = ["Banana", "Orange", "Apple"];
+        console.log(typeof fruits8);
+        console.log(Array.isArray(fruits8));
+        console.log(fruits8 instanceof Array);
+
+        // Objetos con arrays dentro
+        const myObj = {
+            name: "John",
+            age: 30,
+            cars: [
+                { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+                { name: "BMW", models: ["320", "X3", "X5"] },
+                { name: "Fiat", models: ["500", "Panda"] }
+            ]
+        };
+
+        let x = "";
+        for (let i in myObj.cars) {
+            x += "<h1>" + myObj.cars[i].name + "</h1>";
+            for (let j in myObj.cars[i].models) {
+                x += myObj.cars[i].models[j] + "<br>";
+            }
+        }
+        console.log(x);
+    </script>
+
+</body>
+
+</html>
