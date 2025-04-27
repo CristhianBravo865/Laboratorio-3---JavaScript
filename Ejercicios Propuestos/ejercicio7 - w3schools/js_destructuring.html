@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        // Object Destructuring
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50
+        };
+
+        let firstName = person.firstName;
+        let lastName = person.lastName;
+        console.log(firstName, lastName);
+
+        // Object Destructuring with Order
+        const person2 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50
+        };
+
+        let lastName2 = person2.lastName;
+        let firstName2 = person2.firstName;
+        console.log(firstName2, lastName2);
+
+        // Object Default Values
+        const person3 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50
+        };
+
+        let { firstName: fName, lastName: lName, country = "US" } = person3;
+        console.log(fName, lName, country);
+
+        // Object Property Alias
+        const person4 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50
+        };
+
+        let { lastName: name } = person4;
+        console.log(name);
+
+        // String Destructuring
+        let nameStr = "W3Schools";
+        let [a1, a2, a3, a4, a5] = nameStr;
+        console.log(a1, a2, a3, a4, a5);
+
+        // Array Destructuring
+        const fruits = ["Bananas", "Oranges", "Apples", "Mangos"];
+        let [fruit1, fruit2] = fruits;
+        console.log(fruit1, fruit2);
+
+        // Skipping Array Values
+        const fruits2 = ["Bananas", "Oranges", "Apples", "Mangos"];
+        let [fruit1Skipped, , fruit2Skipped] = fruits2;
+        console.log(fruit1Skipped, fruit2Skipped);
+
+        // Array Position Values
+        const fruits3 = ["Bananas", "Oranges", "Apples", "Mangos"];
+        let { 0: fruit1Pos, 1: fruit2Pos } = fruits3;
+        console.log(fruit1Pos, fruit2Pos);
+
+        // The Rest Property
+        const numbers = [10, 20, 30, 40, 50, 60, 70];
+        const [a, b, ...rest] = numbers;
+        console.log(a, b, rest);
+
+        // Destructuring Maps
+        const fruitsMap = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+        ]);
+
+        let text = "";
+        for (const [key, value] of fruitsMap) {
+            text += key + " is " + value + "<br>";
+        }
+        console.log(text);
+
+        // Swapping JavaScript Variables
+        let firstNameSwap = "John";
+        let lastNameSwap = "Doe";
+        [firstNameSwap, lastNameSwap] = [lastNameSwap, firstNameSwap];
+        console.log(firstNameSwap, lastNameSwap);
+    </script>
+</body>
+</html>
