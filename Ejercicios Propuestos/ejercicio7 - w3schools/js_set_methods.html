@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        // The new Set() Method
+        const letters = new Set(["a", "b", "c"]);
+
+        // The add() Method
+        letters.add("d");
+        letters.add("e");
+        letters.add("a");
+
+        // Listing Set Elements
+        let text = "";
+        for (const x of letters) {
+            text += x + " ";
+        }
+        console.log(text);
+
+        // The has() Method
+        const answer = letters.has("d");
+        console.log(answer);
+
+        // The forEach() Method
+        letters.forEach(function (value) {
+            text += value + " ";
+        });
+        console.log(text);
+
+        // The values() Method
+        const myIterator = letters.values();
+        text = "";
+        for (const entry of myIterator) {
+            text += entry + " ";
+        }
+        console.log(text);
+
+        // The keys() Method
+        const keysIterator = letters.keys();
+        text = "";
+        for (const x of keysIterator) {
+            text += x + " ";
+        }
+        console.log(text);
+
+        // The entries() Method
+        const entriesIterator = letters.entries();
+        text = "";
+        for (const entry of entriesIterator) {
+            text += entry + " ";
+        }
+        console.log(text);
+    </script>
+</body>
+</html>
