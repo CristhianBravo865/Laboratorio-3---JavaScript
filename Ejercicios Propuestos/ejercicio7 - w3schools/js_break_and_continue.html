@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        // The Break Statement
+        let text = "";
+        for (let i = 0; i < 10; i++) {
+            if (i === 3) { break; }
+            text += "The number is " + i + "<br>";
+        }
+        console.log(text);
+
+        // The Continue Statement
+        text = "";
+        for (let i = 0; i < 10; i++) {
+            if (i === 3) { continue; }
+            text += "The number is " + i + "<br>";
+        }
+        console.log(text);
+
+        // JavaScript Labels
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        let list = "";
+        list: {
+            list += cars[0] + "<br>";
+            list += cars[1] + "<br>";
+            break list;
+            list += cars[2] + "<br>";
+            list += cars[3] + "<br>";
+        }
+        console.log(list);
+    </script>
+</body>
+</html>
