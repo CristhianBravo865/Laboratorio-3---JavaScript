@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        // JavaScript Class Syntax
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+
+        // Using a Class
+        const myCar1 = new Car("Ford", 2014);
+        const myCar2Instance = new Car("Audi", 2019);
+
+        // Constructor Method
+        class CarWithConstructor {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+
+        // Class Methods
+        class CarWithMethods {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+
+            age() {
+                const date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+
+        const myCar = new CarWithMethods("Ford", 2014);
+        document.getElementById("demo").innerHTML =
+            "My car is " + myCar.age() + " years old.";
+
+        // Class Methods with Parameters
+        class CarWithParameter {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+
+            age(x) {
+                return x - this.year;
+            }
+        }
+
+        const date = new Date();
+        let year = date.getFullYear();
+
+        const myCarWithParam = new CarWithParameter("Ford", 2014);
+        document.getElementById("demo2").innerHTML =
+            "My car is " + myCarWithParam.age(year) + " years old.";
+
+    </script>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+</body>
+</html>
