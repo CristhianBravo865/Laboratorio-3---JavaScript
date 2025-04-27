@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        // Crear fecha actual
+        const now = new Date();
+        console.log(now);
+
+        // Métodos para obtener partes de la fecha
+        console.log(now.getFullYear());
+        console.log(now.getMonth());
+        console.log(now.getDate());
+        console.log(now.getDay());
+        console.log(now.getHours());
+        console.log(now.getMinutes());
+        console.log(now.getSeconds());
+        console.log(now.getMilliseconds());
+        console.log(now.getTime());
+
+        // getFullYear
+        const d1 = new Date("2021-03-25");
+        console.log(d1.getFullYear());
+        console.log(new Date().getFullYear());
+
+        // getMonth
+        console.log(d1.getMonth());
+        console.log(new Date().getMonth());
+
+        const months = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"];
+        let monthName = months[d1.getMonth()];
+        console.log(monthName);
+
+        // getDate
+        console.log(d1.getDate());
+        console.log(new Date().getDate());
+
+        // getHours
+        console.log(d1.getHours());
+        console.log(new Date().getHours());
+
+        // getMinutes
+        console.log(d1.getMinutes());
+        console.log(new Date().getMinutes());
+
+        // getSeconds
+        console.log(d1.getSeconds());
+        console.log(new Date().getSeconds());
+
+        // getMilliseconds
+        console.log(d1.getMilliseconds());
+        console.log(new Date().getMilliseconds());
+
+        // getDay
+        console.log(d1.getDay());
+        console.log(new Date().getDay());
+
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let dayName = days[d1.getDay()];
+        console.log(dayName);
+
+        // getTime
+        const d1970 = new Date("1970-01-01");
+        console.log(d1970.getTime());
+        console.log(d1.getTime());
+        console.log(new Date().getTime());
+
+        // Date.now()
+        let ms = Date.now();
+        console.log(ms);
+
+        const minute = 1000 * 60;
+        const hour = minute * 60;
+        const day = hour * 24;
+        const year = day * 365;
+        let years = Math.round(Date.now() / year);
+        console.log(years);
+
+        // Métodos UTC
+        console.log(d1.getUTCDate());
+        console.log(d1.getUTCFullYear());
+        console.log(d1.getUTCMonth());
+        console.log(d1.getUTCDay());
+        console.log(d1.getUTCHours());
+        console.log(d1.getUTCMinutes());
+        console.log(d1.getUTCSeconds());
+        console.log(d1.getUTCMilliseconds());
+
+        // Diferencia entre hora local y UTC
+        let diff = d1.getTimezoneOffset();
+        console.log(diff);
+    </script>
+</body>
+</html>
