@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+        // Array length
+        let size = fruits.length;
+        console.log(size);
+
+        // Array toString()
+        document.getElementById("demo").innerHTML = fruits.toString();
+
+        // Array at()
+        let fruit = fruits.at(2);
+        console.log(fruit);
+
+        // Array join()
+        document.getElementById("demo").innerHTML = fruits.join(" * ");
+
+        // Array pop()
+        fruits.pop();
+        console.log(fruits);
+
+        // Array push()
+        fruits.push("Kiwi");
+        console.log(fruits);
+
+        // Array shift()
+        fruits.shift();
+        console.log(fruits);
+
+        // Array unshift()
+        fruits.unshift("Lemon");
+        console.log(fruits);
+
+        // Array delete() (warning)
+        delete fruits[0];
+        console.log(fruits);
+
+        // Array concat()
+        const myGirls = ["Cecilie", "Lone"];
+        const myBoys = ["Emil", "Tobias", "Linus"];
+        const myChildren = myGirls.concat(myBoys);
+        console.log(myChildren);
+
+        // Array copyWithin()
+        fruits.copyWithin(2, 0);
+        console.log(fruits);
+
+        // Array flat()
+        const myArr = [[1, 2], [3, 4], [5, 6]];
+        const newArr = myArr.flat();
+        console.log(newArr);
+
+        // Array flatMap()
+        const flatMapArr = [1, 2, 3, 4, 5, 6];
+        const flatMappedArr = flatMapArr.flatMap(x => [x, x * 10]);
+        console.log(flatMappedArr);
+
+        // Array splice()
+        fruits.splice(2, 0, "Lemon", "Kiwi");
+        console.log(fruits);
+
+        // Array toSpliced() (ES2023)
+        const months = ["Jan", "Feb", "Mar", "Apr"];
+        const spliced = months.toSpliced(0, 1);
+        console.log(spliced);
+
+        // Array slice()
+        const citrus = fruits.slice(1, 3);
+        console.log(citrus);
+    </script>
+
+</body>
+</html>
