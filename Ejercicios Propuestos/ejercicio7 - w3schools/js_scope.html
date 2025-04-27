@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+
+    <script>
+        // Block Scope
+        {
+            let x1 = 2;
+        }
+
+        {
+            var x2 = 2;
+        }
+
+        // Local Scope
+        function myFunction1() {
+            let carName1 = "Volvo";
+        }
+
+        // Function Scope
+        function myFunction2() {
+            var carName2 = "Volvo";
+        }
+        function myFunction3() {
+            let carName3 = "Volvo";
+        }
+        function myFunction4() {
+            const carName4 = "Volvo";
+        }
+
+        // Global JavaScript Variables
+        let carName5 = "Volvo";
+
+        function myFunction5() {
+            // code here can also use carName5
+        }
+
+        // Global Scope
+        var x3 = 2;
+        let x4 = 2;
+        const x5 = 2;
+
+        // Automatically Global
+        function myFunction6() {
+            carName6 = "Volvo"; // sin declarar con var, let o const
+        }
+        myFunction6();
+
+        // Strict Mode
+        "use strict";
+        // En strict mode, las variables no declaradas no son globales
+
+        // Global Variables in HTML
+        var carName7 = "Volvo"; // window.carName7 disponible
+
+        let carName8 = "Volvo"; // window.carName8 NO disponible
+    </script>
+</body>
+</html>
