@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <script>
+        // Create a Map using Array
+        const fruits = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+        ]);
+        console.log(fruits);
+
+        // Create a Map using set()
+        const fruits2 = new Map();
+        fruits2.set("apples", 500);
+        fruits2.set("bananas", 300);
+        fruits2.set("oranges", 200);
+        console.log(fruits2);
+
+        // Change Map Value using set()
+        fruits2.set("apples", 200);
+        console.log(fruits2.get("apples"));
+
+        // get() Method
+        console.log(fruits2.get("apples"));    // Returns 500
+
+        // Check type of Map
+        console.log(typeof fruits);  // Returns object
+        console.log(fruits instanceof Map);  // Returns true
+
+    </script>
+</body>
+</html>
