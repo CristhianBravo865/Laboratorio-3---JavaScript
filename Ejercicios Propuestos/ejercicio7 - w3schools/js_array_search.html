@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+
+    <script>
+        const fruits = ["Apple", "Orange", "Apple", "Mango"];
+        let position = fruits.indexOf("Apple") + 1;
+        console.log(position);
+
+        position = fruits.lastIndexOf("Apple") + 1;
+        console.log(position);
+
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        let isMangoPresent = fruits2.includes("Mango");
+        console.log(isMangoPresent);
+
+        const numbers = [4, 9, 16, 25, 29];
+        let first = numbers.find(myFunction);
+
+        function myFunction(value, index, array) {
+            return value > 18;
+        }
+        console.log(first);
+
+        let firstIndex = numbers.findIndex(myFunction);
+        console.log(firstIndex);
+
+        const temp = [27, 28, 30, 40, 42, 35, 30];
+        let high = temp.findLast(x => x > 40);
+        console.log(high);
+
+        let pos = temp.findLastIndex(x => x > 40);
+        console.log(pos);
+    </script>
+
+</body>
+
+</html>
