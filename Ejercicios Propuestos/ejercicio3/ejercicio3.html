@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -10,5 +10,23 @@
     <button id="Boton_calcular">Calcular</button>
 
     <div id="resultado"></div>
+
+    <script>
+        const botonCalcular = document.getElementById('Boton_calcular');
+        const resultado = document.getElementById('resultado');
+
+        botonCalcular.addEventListener('click', () => {
+            const hoy = new Date();
+            const diaArequipa = new Date(hoy.getFullYear(), 7, 15); 
+
+            if (hoy > diaArequipa) {
+                diaArequipa.setFullYear(hoy.getFullYear() + 1);
+            }
+
+            const diferencia = diaArequipa - hoy;
+
+            resultado.textContent = `Faltan ${diasFaltantes} días para el día de Arequipa.`;
+        });
+    </script>
 </body>
 </html>
