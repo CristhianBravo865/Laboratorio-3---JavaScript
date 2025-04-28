@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Página1</title>
 </head>
+
 <body>
 
-<h2>Controlar el tamaño y color del texto</h2>
+    <h2>Controlar el tamaño y color del texto</h2>
 
-<p id="miTexto">Texto a modificar</p>
+    <p id="miTexto">Texto a modificar</p>
 
-<button onclick="agrandarTexto()">Agrandar texto</button>
-<button onclick="reducirTexto()">Reducir texto</button>
+    <button onclick="agrandarTexto()">Agrandar texto</button>
+    <button onclick="reducirTexto()">Reducir texto</button>
+    <script>
+        function agrandarTexto() {
+            document.getElementById('miTexto').style.fontSize = '88px';
+        }
 
+        function reducirTexto() {
+            document.getElementById('miTexto').style.fontSize = '8px';
+        }
+    </script>
 </body>
+
 </html>
