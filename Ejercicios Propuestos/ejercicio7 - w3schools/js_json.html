@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+<script>
+// JSON Example
+const employeesJSON = `{
+  "employees":[
+    {"firstName":"John", "lastName":"Doe"},
+    {"firstName":"Anna", "lastName":"Smith"},
+    {"firstName":"Peter", "lastName":"Jones"}
+  ]
+}`;
+
+console.log(JSON.parse(employeesJSON));  // Parse the JSON string to an object
+
+// What is JSON?
+// JSON stands for JavaScript Object Notation
+// JSON is a lightweight data interchange format
+// JSON is language independent
+// JSON is "self-describing" and easy to understand
+
+
+// JSON Example (Formatted)
+const jsonString = `{
+  "employees": [
+    {"firstName":"John", "lastName":"Doe"},
+    {"firstName":"Anna", "lastName":"Smith"},
+    {"firstName":"Peter", "lastName":"Jones"}
+  ]
+}`;
+
+const jsonObj = JSON.parse(jsonString);  // Parse JSON to JavaScript object
+console.log(jsonObj);
+
+// The JSON Format Evaluates to JavaScript Objects
+// JSON can be easily converted to JavaScript objects using JSON.parse()
+
+
+// JSON Syntax Rules
+// Data is in name/value pairs
+// Data is separated by commas
+// Curly braces hold objects
+// Square brackets hold arrays
+
+
+// JSON Data - A Name and a Value
+let nameValue = `"firstName":"John"`;
+console.log(nameValue);  // "firstName":"John"
+
+
+// JSON Objects
+const personJSON = `{"firstName":"John", "lastName":"Doe"}`;
+const personObj = JSON.parse(personJSON);
+console.log(personObj);
+
+
+// JSON Arrays
+const employeesArrayJSON = `{
+  "employees": [
+    {"firstName":"John", "lastName":"Doe"},
+    {"firstName":"Anna", "lastName":"Smith"},
+    {"firstName":"Peter", "lastName":"Jones"}
+  ]
+}`;
+const employeesArrayObj = JSON.parse(employeesArrayJSON);
+console.log(employeesArrayObj);
+
+
+// Converting a JSON Text to a JavaScript Object
+let text = '{ "employees" : [' +
+  '{ "firstName":"John" , "lastName":"Doe" },' +
+  '{ "firstName":"Anna" , "lastName":"Smith" },' +
+  '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+const obj = JSON.parse(text);
+
+// Displaying data in a webpage
+document.getElementById("demo").innerHTML =
+  obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+</script>
+<p id="demo"></p>
+</body>
+</html>
