@@ -11,5 +11,17 @@
     <button id="invertirBtn">Invertir</button>
 
     <div id="resultado"></div>
+
+    <script>
+        const boton = document.getElementById('invertirBtn');
+        const input = document.getElementById('textoInput');
+        const resultado = document.getElementById('resultado');
+
+        boton.addEventListener('click', () => {
+            const texto = input.value;
+            const textoInvertido = texto.split('').reverse().join('');
+            resultado.textContent = textoInvertido;
+        });
+    </script>
 </body>
 </html>
