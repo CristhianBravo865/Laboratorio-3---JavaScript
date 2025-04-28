@@ -29,6 +29,7 @@ formulario.addEventListener('submit', (e) => {
     // mostrar boton para generar nums
     botonGenerarNumeros.style.display = 'inline';
 });
+
 // Evento para generar nums
 botonGenerarNumeros.addEventListener('click', () => {
     const celdas = document.querySelectorAll('.valor');
@@ -41,4 +42,19 @@ botonGenerarNumeros.addEventListener('click', () => {
     // Mostrar el botón para suma
     botonCalcularSuma.style.display = 'inline';
 });
+
+// Evento para la suma
+botonCalcularSuma.addEventListener('click', () => {
+    const celdas = document.querySelectorAll('.valor');
+    let suma = 0;
+
+    celdas.forEach(celda => {
+        const valor = parseInt(celda.textContent) || 0;
+        suma += valor;
+    });
+
+    const resultado = document.getElementById('resultado');
+    resultado.textContent = `La suma de todos los valores es: ${suma}`;
+});
+
 
