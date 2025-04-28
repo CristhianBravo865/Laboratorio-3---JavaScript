@@ -24,6 +24,7 @@
             }
 
             const diferencia = diaArequipa - hoy;
+            const diasFaltantes = Math.ceil(diferencia / (1000 * 60 * 60 * 24));
 
             resultado.textContent = `Faltan ${diasFaltantes} días para el día de Arequipa.`;
         });
