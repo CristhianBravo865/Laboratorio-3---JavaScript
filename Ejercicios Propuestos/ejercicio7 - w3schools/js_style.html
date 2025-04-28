@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Style Guide</title>
+</head>
+
+<body>
+
+    <script>
+        // JavaScript Coding Conventions
+
+        // Variable Names
+        let firstName = "John";
+        let lastName = "Doe";
+        let price = 19.90;
+        let tax = 0.20;
+        let fullPrice = price + (price * tax);
+
+        // Spaces Around Operators
+        let x = y + z;
+        const myArray = ["Volvo", "Saab", "Fiat"];
+
+        // Code Indentation
+        function toCelsius(fahrenheit) {
+            return (5 / 9) * (fahrenheit - 32);
+        }
+
+        // Statement Rules
+        // Simple Statements
+        const cars = ["Volvo", "Saab", "Fiat"];
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+
+        // Complex Statements
+        if (time < 20) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+
+        // Loops
+        for (let i = 0; i < 5; i++) {
+            x += i;
+        }
+
+        // Object Rules
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+
+        // Short Objects
+        //const person = { firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue" };
+
+        // Line Length < 80
+        document.getElementById("demo").innerHTML =
+            "Hello Dolly.";
+
+        // Naming Conventions
+        let camelCaseVariable = "value";
+        let CONSTANT_VARIABLE = "value";
+
+        // Loading JavaScript in HTML
+        //<script src="myscript.js"></script>
+
+    // Accessing HTML Elements
+    const obj1 = document.getElementById("Demo");
+    const obj2 = document.getElementById("demo");
+
+    </script>
+
+</body>
+
+</html>
