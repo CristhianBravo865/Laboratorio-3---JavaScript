@@ -37,6 +37,12 @@ botonCalcular.addEventListener('click', () => {
         case '||':
             resultado = Boolean(numero1) || Boolean(numero2);
             break;
+        case '!&&':
+            resultado = !(Boolean(numero1) && Boolean(numero2));
+            break;
+        case '!||':
+            resultado = !(Boolean(numero1) || Boolean(numero2));
+            break;
         default:
             resultado = 'Operación no implementada';
     }
