@@ -1,25 +1,31 @@
 const formulario = document.getElementById('formulario_valores');
-const inputCantidad = document.getElementById('input_cantidad');
+const inputFilas = document.getElementById('input_filas');
+const inputColumnas = document.getElementById('input_columnas');
 const tablaContenedor = document.getElementById('tabla_contenedor');
+const botonGenerarNumeros = document.getElementById('Boton_generarNumeros');
 const botonCalcularSuma = document.getElementById('Boton_calcularSuma');
 
+// Evento
 formulario.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const cantidad = parseInt(inputCantidad.value);
+    e.preventDefault(); // Evitar recarga de la página
+    const filas = parseInt(inputFilas.value);
+    const columnas = parseInt(inputColumnas.value);
 
-    // Crear tabla
-    let tablaHTML = '<table border="1" cellpadding="5" cellspacing="0"><tr>';
-
-    for (let i = 0; i < cantidad; i++) {
-        // nums aleatorios
-        const valor = Math.floor(Math.random() * 100); 
-        tablaHTML += `<td class="valor">${valor}</td>`;
+    // crear tabla vacia
+    let tablaHTML = '<table border="1" cellpadding="5" cellspacing="0">';
+    //for para crear la tabla
+    for (let i = 0; i < filas; i++) {
+        tablaHTML += '<tr>'; // fila creada
+        for (let j = 0; j < columnas; j++) {
+            tablaHTML += `<td class="valor"></td>`; // celdas vacias
+        }
+        tablaHTML += '</tr>';
     }
 
-    tablaHTML += '</tr></table>';
+    tablaHTML += '</table>';
 
+    // agregar la tabla
     tablaContenedor.innerHTML = tablaHTML;
-
-    // Mostrar el botón de calcular suma
-    botonCalcularSuma.style.display = 'inline';
+    // mostrar boton para generar nums
+    botonGenerarNumeros.style.display = 'inline';
 });
