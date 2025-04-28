@@ -1,8 +1,8 @@
 const botonCalcular = document.getElementById('Boton_calcular');
 
 botonCalcular.addEventListener('click', () => {
-    const numero1 = parseFloat(document.getElementById('input_numero1').value);
-    const numero2 = parseFloat(document.getElementById('input_numero2').value);
+    const numero1 = parseInt(document.getElementById('input_numero1').value);
+    const numero2 = parseInt(document.getElementById('input_numero2').value);
     const operador = document.getElementById('operador').value;
     const resultadoDiv = document.getElementById('resultado');
 
@@ -42,6 +42,18 @@ botonCalcular.addEventListener('click', () => {
             break;
         case '!||':
             resultado = !(Boolean(numero1) || Boolean(numero2));
+            break;
+        case '&':
+            resultado = numero1 & numero2;
+            break;
+        case '|':
+            resultado = numero1 | numero2;
+            break;
+        case '!&':
+            resultado = ~(numero1 & numero2);
+            break;
+        case '!|':
+            resultado = ~(numero1 | numero2);
             break;
         default:
             resultado = 'Operación no implementada';
