@@ -8,17 +8,22 @@
     <h1>Tabla dinámica de valores</h1>
 
     <form id="formulario_valores">
-        <label for="cantidad">¿Cuántos valores quieres generar?</label>
-        <input type="number" id="input_cantidad" min="1" required>
+        <label for="filas">¿Cuántas filas quieres?</label>
+        <input type="number" id="input_filas" min="1" required>
+        
+        <label for="columnas">¿Cuántas columnas quieres?</label>
+        <input type="number" id="input_columnas" min="1" required>
+        
         <button type="submit" id="Boton_generarTabla">Generar tabla</button>
     </form>
 
     <div id="tabla_contenedor"></div>
 
+    <button id="Boton_generarNumeros" style="display: none;">Generar números</button>
     <button id="Boton_calcularSuma" style="display: none;">Calcular suma</button>
 
     <div id="resultado"></div>
-    
+
     <script src="ejercicio5.js"></script>
 </body>
 </html>
