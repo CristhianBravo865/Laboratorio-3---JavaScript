@@ -5,7 +5,7 @@ const tablaContenedor = document.getElementById('tabla_contenedor');
 const botonGenerarNumeros = document.getElementById('Boton_generarNumeros');
 const botonCalcularSuma = document.getElementById('Boton_calcularSuma');
 
-// Evento
+// Evento para la tabla
 formulario.addEventListener('submit', (e) => {
     e.preventDefault(); // Evitar recarga de la página
     const filas = parseInt(inputFilas.value);
@@ -29,3 +29,16 @@ formulario.addEventListener('submit', (e) => {
     // mostrar boton para generar nums
     botonGenerarNumeros.style.display = 'inline';
 });
+// Evento para generar nums
+botonGenerarNumeros.addEventListener('click', () => {
+    const celdas = document.querySelectorAll('.valor');
+
+    celdas.forEach(celda => {
+        const numeroAleatorio = Math.floor(Math.random() * 100); // número aleatorio
+        celda.textContent = numeroAleatorio;
+    });
+
+    // Mostrar el botón para suma
+    botonCalcularSuma.style.display = 'inline';
+});
+
