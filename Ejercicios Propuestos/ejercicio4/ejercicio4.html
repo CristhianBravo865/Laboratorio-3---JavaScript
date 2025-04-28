@@ -11,5 +11,23 @@
     <button id="Boton_quitarGuiones">Quitar guiones</button>
 
     <div id="resultado"></div>
+
+    <script>
+        const botonQuitarGuiones = document.getElementById('Boton_quitarGuiones');
+        const inputUrl = document.getElementById('input_url');
+        const resultado = document.getElementById('resultado');
+
+        botonQuitarGuiones.addEventListener('click', () => {
+            const url = inputUrl.value;
+            // Dividir por cada / en un array 
+            const partes = url.split('/');
+            const codigoConGuiones = partes[partes.length - 1];
+
+            // Eliminar los guiones
+            const codigoSinGuiones = codigoConGuiones.replaceAll('-', '');
+
+            resultado.textContent = `Cod sin guiones: ${codigoSinGuiones}`;
+        });
+    </script>
 </body>
 </html>
