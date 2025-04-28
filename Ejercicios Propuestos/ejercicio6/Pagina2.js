@@ -24,8 +24,15 @@ botonCalcular.addEventListener('click', () => {
         case '^':
             resultado = Math.pow(numero1, numero2);
             break;
+        case '√':
+            if (numero2 !== 0) {
+                resultado = Math.pow(numero1, 1 / numero2);
+            } else {
+                resultado = 'Error: Índice de raíz no puede ser cero';
+            }
+            break;
         default:
-            resultado = 'Operacion no implementada';
+            resultado = 'Operación no implementada';
     }
 
     resultadoDiv.textContent = `Resultado: ${resultado}`;
