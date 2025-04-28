@@ -31,6 +31,12 @@ botonCalcular.addEventListener('click', () => {
                 resultado = 'Error: Índice de raíz no puede ser cero';
             }
             break;
+        case '&&':
+            resultado = Boolean(numero1) && Boolean(numero2);
+            break;
+        case '||':
+            resultado = Boolean(numero1) || Boolean(numero2);
+            break;
         default:
             resultado = 'Operación no implementada';
     }
